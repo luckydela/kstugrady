@@ -1,0 +1,69 @@
+<body>
+  <div class="row">
+      <div class="col-md-4 col-lg-5 logincard">
+     <div class="card animated tada" >
+       <h3 class="card-category text-gray" align="center">Mobile Money Payment</h3>
+  <div class="card-avatar">
+          <a href="#pablo">
+          </a>
+        </div>
+        <div class="card-body">
+             <form>
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Enter MOMO number</label>
+                    <input type="text" class="form-control" name="momonum"  required>
+                  </div>          
+                  <br><br>
+                
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Amount</label>
+                      <input type="number" class="form-control" id="amount" name="amount" required>
+                    </div>
+                    <br><br>        
+                   <button type="submit" class="btn" (click)="makepayment()">Make Momo Payment</button>                  
+      </form>   
+      </div>
+
+     </div>
+    </div>
+
+    <div class="col-md-4 col-lg-5 logincard">
+      <div class="card animated tada" >
+ <div class="card-body">
+   <h3 class="card-category text-gray" align="center">Bank Payment Verification</h3>
+
+   <form >
+     <div class="form-group">
+       <label class="bmd-label-floating">Enter Student number</label>
+       <input type="text" class="form-control" name="momonum"  required>
+     </div>
+     <br><br> 
+       <div class="form-group">
+         <label class="bmd-label-floating">Bank Payment Reciept Numner</label>
+         <input type="text" class="form-control" id="rcptno" name="rcptno"  required>
+       </div>
+       <br><br>
+      <button type="submit" class="btn" (click)="bankverifypayment()">Verify Payment</button>     
+ </form>
+ </div>
+
+</div>
+</div>
+
+</div>  
+</body>
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+

@@ -1,0 +1,68 @@
+.range-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range {
+    padding-right: 50px;
+}
+.range input {
+    flex-grow: 1;
+}
+.range-btn {
+    display: flex;
+}
+.card-header{
+    background: rgb(41, 40, 7);
+}
+.card-title{
+color: #fff;
+}
+.text{
+    color:rgb(41, 40, 7);
+}
+.btn{
+background: rgb(41, 40, 7);
+color: #fff;
+}
+.gen2{
+  background: rgb(247, 74, 6);  
+  border-radius: 30px;
+  width: 100px;
+  height: 50px;
+  margin-top:5px;
+  cursor: pointer;
+}
+
+
+
+
+.getternsetter{
+    background: #fff;
+    box-shadow: 5px 20px 20px 15px rgb(255, 255, 255);
+    line-height: 100px;
+    margin-bottom: -23px;
+
+}
+
+h3.card-title{
+    font-weight: 20px;
+}
+.heading-report1{
+    box-shadow: 25px 20px 20px 25px rgb(207, 207, 207);
+    background: #fff;
+    line-height: 50px;
+    margin-bottom: -23px;
+
+}
+
+
+p.color{
+    color: #52516a;
+    font-size: 50px;
+}
+
+h3.card-title{
+    font-weight: bold;
+}
