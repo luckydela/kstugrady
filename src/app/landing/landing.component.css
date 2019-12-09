@@ -1,10 +1,9 @@
-.logincard{
-  
-    margin-left:  auto;
-     margin-right: auto; 
-     margin-top: 190px;
-     text-align: left;
-}
+/* .logincard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
 .img{
     height: 120px;
     width: 300px;
@@ -15,18 +14,23 @@
 body {
     font-family: "Lato", sans-serif;
 }
-.main-head{
+/* .main-head{
     height: 150px;
     background: #FFF;  
-}
+} */
 .sidenav {
     background: rgb(41, 40, 7);
     height: 100%;
-    overflow-x: hidden;
-    padding-top: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 .main {
-    padding: 0px 10px;
+    margin-top: 30%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-height: 450px) {
@@ -82,14 +86,11 @@ body {
 
 
 .btn{
-    margin-top: 80%;
     background:  rgb(41, 40, 7);
-    width: 500px;
-    margin-left: 5%;
 }
 
 .btn:hover{
-background: #2f3308;
+    background: #2f3308;
 }
 
 

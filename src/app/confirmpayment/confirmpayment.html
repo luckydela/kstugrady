@@ -2,7 +2,7 @@
   <div class="row">
       <div class="col-md-4 col-lg-5 logincard">
      <div class="card animated tada" >
-       <h3 class="card-category text-gray" align="center">Mobile Money Payment</h3>
+       <h3 class="card-category text-gray" align="center">Confirm Payment</h3>
   <div class="card-avatar">
           <a href="#pablo">
           </a>
@@ -10,11 +10,11 @@
         <div class="card-body">
             <form>
               <div class="form-group">
-                <label class="bmd-label-floating">Amount</label>
-                <input type="number" class="form-control" id="amount" name="amount" [ngModel]="amount" required disabled>
+                <label class="bmd-label-floating">Reciept No</label>
+                <input type="number" class="form-control" id="rcptno" name="rcptno" [(ngModel)]="rcptno" required>
               </div>
               <br><br>        
-              <button type="submit" [disabled]="disable" class="btn" (click)="makepayment()">{{btntext}}</button>                  
+              <button type="submit" [disabled]="disable" class="btn" (click)="confirm()">{{btntext}}</button>                  
           </form>
     </div>
 

@@ -1,8 +1,8 @@
 <body>
 <div class="col-md-4 logincard">
    <div class="card animated tada" >
-     <h3 class="card-category text-gray" align="center">KsTU Graduation Platform </h3>
-<div class="card-avatar">
+     <h3 class="card-category text-gray">KsTU Graduation Platform </h3>
+    <div class="card-avatar">
         <a href="#pablo">
           <img class="img" Style=" border-radius: 1000px; width: 120px;  border: 5px solid rgb(250, 250, 250);" src="assets/img/logo.jpeg" />
         </a>
@@ -11,14 +11,14 @@
         <!-- <h4 class="card-title" align="center">Graduand</h4> -->
           <form>
               <div class="form-group">
-                <label class="bmd-label-floating"> Student Number</label>
-                <input type="text" class="form-control" [(ngModel)]="usr.studentno" name="studentno"  required>
+                <label class="bmd-label-floating">Username </label>
+                <input type="text" class="form-control" [(ngModel)]="usr.unm" name="unm"  required>
               </div>
-              <!-- <div class="form-group">
-                <label class="bmd-label-floating"> Index Number</label>
-                <input type="text" class="form-control" [(ngModel)]="usr.indexno" name="indexno"  required>
+              <div class="form-group">
+                <label class="bmd-label-floating"> Password</label>
+                <input type="text" class="form-control" [(ngModel)]="usr.pwd" name="pwd"  required>
               </div>
-              <br><br> -->
+              <br><br>
             <button type="submit" [disabled]="disable" class="btn btn-sm" style=" background:  rgb(41, 40, 7); border-radius: 30px; margin-left: 80px; margin-right:80px; width:200px;"  (click)="stdlogin()">LogIn</button>
           </form>
       </div>

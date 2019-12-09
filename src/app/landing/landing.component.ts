@@ -8,13 +8,20 @@ import {Router} from '@angular/router';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    console.log('jkkk');
+    
+   }
 
   ngOnInit() {
   }
 
-  getStarted(){
-    this.router.navigate(['/login'])
+  getStarted(role:any){
+    if(role === 'student'){
+      this.router.navigate(['/login'])
+    } else {
+      this.router.navigate(['/staff'])
+    }
   }
 
 }

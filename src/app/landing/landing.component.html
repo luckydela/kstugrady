@@ -2,18 +2,15 @@
   <video autoplay muted loop id="myVideo">
       <source src="assets/img/Workaholic.mp4" type="video/mp4">
   </video>
-  <div class=" sidenav">
+  <div class="sidenav">
     <div class="login-main-text">
-        <h2 class="card-title" align="center">KSTU Grady</h2>
-        <img class="img" Style=" border-radius: 1000px; width: 120px;  border: 5px solid rgb(250, 250, 250);" src="assets/img/logo.jpeg"/>
+        <h2 class="card-title">KsTU Graduation Platform</h2>
+        <img class="img" style=" border-radius: 1000px; width: 120px;  border: 5px solid rgb(250, 250, 250);" src="assets/img/logo.jpeg"/>
     </div>
  </div>
- <div class=" main">
-    <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-    <div class=" logincard">
-        <button type="submit" class="btn btn-round btn-block" (click)="getStarted()">Get Started!</button>
-   </div>
-  </div>
+ <div class="main">
+    <button type="submit" class="btn btn-round btn-block" (click)="getStarted('student')">Student</button>
+    <button type="submit" class="btn btn-round btn-block" (click)="getStarted('staff')">Staff</button>
  </div>
 </body>
 

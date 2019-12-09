@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from '../service/service.service';
-import swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-staff',
+  templateUrl: './staff.component.html',
+  styleUrls: ['./staff.component.css']
 })
-export class LoginComponent implements OnInit {
+export class StaffComponent implements OnInit {
 
   usr={
-    studentno:''
+    unm:'',
+    pwd:''
   }
   rd = []
   disable:boolean = false
@@ -22,30 +22,24 @@ export class LoginComponent implements OnInit {
 
   stdlogin(){
     this.disable = true
-    swal.showLoading()
-    if(this.usr.studentno === ''){
+    if(this.usr.unm === '' || this.usr.pwd === ''){
       this.disable = false
-      swal.hideLoading()
-      this.ssv.dialog('Enter your Student Number','Error')
+      this.ssv.dialog('Enter your username and password','Error')
     } else {
-      this.ssv.login(this.usr)
+      this.ssv.staff(this.usr)
       .subscribe(rd => {
 
         this.disable = false
-        swal.hideLoading()
         if(rd === null){
-          this.ssv.dialog('We could not find a student with studentno:: '+this.usr.studentno,'Error')
-        } else if(rd['error']) {
-          this.ssv.dialog(rd['error'],'Error')
+          this.ssv.dialog('We could not find the user :: '+this.usr.unm,'Error')
         } else {
           localStorage.setItem('ud',JSON.stringify(rd))
           localStorage.setItem('isLoggedInStatus', JSON.stringify({'sts':true}));
-          this.router.navigate(['layout/stdprofile']);
+          let role = rd[0].role === 'plan' ? 'plancm' : 'findpt'
+          this.router.navigate(['layout/'+role]);
         }
       },err => {
-        swal.hideLoading()
         this.disable = false
-        this.ssv.dialog(err,'Error')
         // this.router.navigate(['layout/stdprofile']);
       })
 

@@ -2,7 +2,8 @@
     background:  rgb(41, 40, 7);
 }
 .card-title{
-    color: #fff;
+    color: rgb(41, 40, 7);
+    font-size: 13;
 }
 .btn{
     background:  rgb(41, 40, 7);

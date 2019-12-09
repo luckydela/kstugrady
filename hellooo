@@ -1,0 +1,1000 @@
+  998  mkdir django
+  999  cd django/
+ 1000  youtube-dl https://www.youtube.com/watch?v=e1IyzVyrLSU
+ 1001  youtube-dl https://www.youtube.com/watch?v=OTmQOjsl0eg
+ 1002  cd projects/python/
+ 1003  clear
+ 1004  python3 --version
+ 1005  sudo apt install python3-pip
+ 1006  mkdir react-django
+ 1007  cd react-django/
+ 1008  pip3 install pipenv
+ 1009  code .
+ 1010  pipenv shell
+ 1011  cd projects/python/react-django/
+ 1012  pipenv shell
+ 1013  python -m site --user-base 
+ 1014  sudo vim ~/.profile 
+ 1015  ls
+ 1016  python3 -m venv rcdjango
+ 1017  sudo apt install python3-venv
+ 1018  ls
+ 1019  cd rcdjango/
+ 1020  ls
+ 1021  source bin/activate
+ 1022  cd bin/
+ 1023  ls
+ 1024  cd ..
+ 1025  sudo rm -r rcdjango/
+ 1026  python3 -m venv rcdjango
+ 1027  cd rcdjango/
+ 1028  ls
+ 1029  cd bin/
+ 1030  ls
+ 1031  cd ..
+ 1032  source bin/activate
+ 1033  pipenv shell
+ 1034  cd projects/python/react-django/
+ 1035  ls
+ 1036  cd rcdjango/
+ 1037  ls
+ 1038  mkdir gh && cd $_
+ 1039  cd ..
+ 1040  rm -r gh/
+ 1041  cd ..
+ 1042  rm -r react-django/
+ 1043  python3 -m venv react-django
+ 1044  cd react-django/
+ 1045  source bin/activate
+ 1046  ls
+ 1047  mkdir rcdjango && cd $_
+ 1048  python manage.py startapp leads
+ 1049  cd leadmanager/
+ 1050  python manage.py startapp leads
+ 1051  cd ..
+ 1052  ls
+ 1053  rm -r leadmanager/
+ 1054  django-admin startproject project
+ 1055  cd project/
+ 1056  django-admin startapp leads
+ 1057  pip3 intsall django djangorestframework
+ 1058  pip3 install django djangorestframework
+ 1059  sudo pip3 install django djangorestframework
+ 1060  sudo pip install django djangorestframework
+ 1061  ls
+ 1062  clear
+ 1063  python --version
+ 1064  python3 --version
+ 1065  which python
+ 1066  django startproject leadmanager
+ 1067  django-admin startproject leadmanager
+ 1068  python --version
+ 1069  clear
+ 1070  python --version
+ 1071  python --version
+ 1072  cd projects/python/react-django/
+ 1073  source bin/activate
+ 1074  cd rcdjango/
+ 1075  mkdir newproject && cd $_
+ 1076  cd ..
+ 1077  cd
+ 1078  cd projects/python/react-django/
+ 1079  clear
+ 1080  ls
+ 1081  cd rcdjango/
+ 1082  ls
+ 1083  cd ..
+ 1084  cd rcdjango/
+ 1085  ls
+ 1086  cd project/
+ 1087  ls
+ 1088  python manage.py makemigrations leads
+ 1089  python3 manage.py makemigrations leads
+ 1090  clear
+ 1091  python3 manage.py makemigrations leads
+ 1092  cd projects/python/
+ 1093  rm -r react-django/
+ 1094  mkdir django-projects
+ 1095  cd django-projects/
+ 1096  sudo pip3 install virtualenv
+ 1097  pip3 -V
+ 1098  sudo apt install -y python3-venv 
+ 1099  cd ..
+ 1100  sudo rm -r django-projects/
+ 1101  mkdir custom_python_venv
+ 1102  cd custom_python_venv/
+ 1103  python3 -m venv django-projects
+ 1104  ls django-projects/
+ 1105  source django-projects/bin/activate
+ 1106  deactivate 
+ 1107  source django-projects/bin/activate
+ 1108  clear
+ 1109  ls
+ 1110  cd django-projects/
+ 1111  ls
+ 1112  mkdir react-django && cd $_
+ 1113  pip3 install django djangorestframework
+ 1114  django-admin startproject project
+ 1115  code .
+ 1116  cd project/
+ 1117  django-admin startapp leads
+ 1118  clear
+ 1119  python manage.py makemigrations leads
+ 1120  python manage.py migrate
+ 1121  pip install coverage
+ 1122  coverage run --source='.' manage.py test
+ 1123  coverage report 
+ 1124  cl
+ 1125  clear
+ 1126  /usr/bin/python3
+ 1127  git status 
+ 1128  git branch 
+ 1129  git add -A
+ 1130  git commit -m "Some Changes"
+ 1131  git push origin develop 
+ 1132  clear
+ 1133  git add -A
+ 1134  git commit -m "New"
+ 1135  git push origin develop 
+ 1136  git add -A
+ 1137  git commit -m "New"
+ 1138  git push origin develop 
+ 1139  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1140  python3 encrypt.py 
+ 1141  clear
+ 1142  python3 encrypt.py 
+ 1143  clear
+ 1144  python3 encrypt.py 
+ 1145  jupyter-notebook
+ 1146  git branch 
+ 1147  git status 
+ 1148  git add -A
+ 1149  git commit -m "Changes"
+ 1150  git push origin aobltd 
+ 1151  yarn run build
+ 1152  cd api/
+ 1153  git status 
+ 1154  git add -A
+ 1155  git commit -m "Changes"
+ 1156  git push origin aobltb-production 
+ 1157  clear
+ 1158  ssh root@172.105.90.220
+ 1159  git status 
+ 1160  git add -A
+ 1161  git commit -m "New changes"
+ 1162  git push origin aobltb-production 
+ 1163  ssh root@172.105.90.220
+ 1164  git branch 
+ 1165  tail -f /var/log/apache2/error.log
+ 1166  tail -f /var/log/apache2/error-pos.log 
+ 1167  sudo service apache2 status
+ 1168  clear
+ 1169  sudo rm /var/www/xmarket
+ 1170  sudo rm /etc/apache2/sites-available/xmarket.conf 
+ 1171  sudo service apache2 restart 
+ 1172  python
+ 1173  yarn start
+ 1174  git branch 
+ 1175  git add -A
+ 1176  git checkout master 
+ 1177  git commit -m "Changes"
+ 1178  clear
+ 1179  git checkout master 
+ 1180  git checkout aobltd 
+ 1181  clear
+ 1182  git branch 
+ 1183  git status 
+ 1184  git add -A
+ 1185  git commit -m "bn"
+ 1186  cd api/
+ 1187  git status 
+ 1188  git add -A
+ 1189  git commit -m "hjh"
+ 1190  git push origin aobltb-production 
+ 1191  ssh root@172.105.90.220
+ 1192  tail -f /var/log/apache2/error.log
+ 1193  vim nu
+ 1194  tail -f /var/log/apache2/error-pos.log 
+ 1195  tail -f /var/log/apache2/error.log
+ 1196  vim nu
+ 1197  python jupyter-notebook 
+ 1198  jupyter-notebook
+ 1199  cd projects/rcdev/
+ 1200  git clone https://github.com/KayOhhDee/DHA.git
+ 1201  cd DHA/
+ 1202  npm install
+ 1203  npm start
+ 1204  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1205  youtube-dl https://www.youtube.com/watch?v=M6628Cm12YQ
+ 1206  youtube-dl https://www.youtube.com/watch?v=zcMnu-3wkWo
+ 1207  youtube-dl https://www.youtube.com/watch?v=QXHz2OhqODY
+ 1208  git init 
+ 1209  git remote add origin https://github.com/alleneben/femga.git
+ 1210  git add -A
+ 1211  git commit -m "fem ga initial commit"
+ 1212  git push origin master 
+ 1213  git init
+ 1214  git add -A
+ 1215  git commit -m "initial commit"
+ 1216  git push origin master
+ 1217  git remote add origin https://github.com/b
+ 1218  git push origin master
+ 1219  git remote remove origin https://github.com/badassboy/frontend.git
+ 1220  git remote remove https://github.com/badassboy/frontend.git
+ 1221  git remote remove frontend
+ 1222  sudo rm -r .git/
+ 1223  clear
+ 1224  git init 
+ 1225  git remote add origin https://github.com/alleneben/dataencryption.git
+ 1226  git add -A
+ 1227  git commit -m "Initial Commit"
+ 1228  git push origin master 
+ 1229  git status 
+ 1230  git branch
+ 1231  git branch develop
+ 1232  git checkout develop 
+ 1233  touch index.html
+ 1234  git add -A
+ 1235  git commit -m "New project links"
+ 1236  git add -A
+ 1237  git commit -m "New project links"
+ 1238  git push origin master 
+ 1239  yarn start
+ 1240  git branch 
+ 1241  git add -A
+ 1242  git commit -m "Initial commit"
+ 1243  git status 
+ 1244  git checkout master 
+ 1245  git checkout develop 
+ 1246  git add -A
+ 1247  git commit -m "Solution for my boss bill gate"
+ 1248  git checkout master 
+ 1249  git merge develop 
+ 1250  git push origin master 
+ 1251  git add -A
+ 1252  git commit -m "New changes"
+ 1253  git remote add origin https://github.com/alleneben/nakonmediawebsite.git
+ 1254  git branch 
+ 1255  git branch develop 
+ 1256  git checkout develop 
+ 1257  git merge master 
+ 1258  git add -A
+ 1259  git commit -m "New changes"
+ 1260  clear
+ 1261  git branch 
+ 1262  git remote add develop https://github.com/alleneben/nakonmediawebsite.git
+ 1263  git push develop develop 
+ 1264  cd projects/
+ 1265  git clone https://github.com/badassboy/frontend.git
+ 1266  cd frontend/
+ 1267  code .
+ 1268  git branch 
+ 1269  git pull origin master 
+ 1270  git fetch origin 
+ 1271  git pull origin master 
+ 1272  git reset --hard origin/master
+ 1273  git pull origin master 
+ 1274  npm install
+ 1275  clear
+ 1276  git branch allen
+ 1277  git add -A
+ 1278  git commit -m "redux setup"
+ 1279  git checkout allen 
+ 1280  git merge master 
+ 1281  clear
+ 1282  git branch 
+ 1283  vim nu
+ 1284  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1285  python3 encrypt.py 
+ 1286  clear
+ 1287  python3 encrypt.py 
+ 1288  clear
+ 1289  python3 encrypt.py 
+ 1290  clear
+ 1291  python3 encrypt.py 
+ 1292  clear
+ 1293  python3 encrypt.py 
+ 1294  python3
+ 1295  python3 encrypt.py 
+ 1296  clear
+ 1297  python3 encrypt.py 
+ 1298  clear
+ 1299  python3 encrypt.py 
+ 1300  clear
+ 1301  python3 encrypt.py 
+ 1302  clear
+ 1303  python3 encrypt.py 
+ 1304  clear
+ 1305  python3 encrypt.py 
+ 1306  clear
+ 1307  python3 encrypt.py 
+ 1308  500
+ 1309  python3 encrypt.py 
+ 1310  500
+ 1311  clear
+ 1312  python3 encrypt.py 
+ 1313  python3 encrypt.py 678
+ 1314  clear
+ 1315  python3 encrypt.py
+ 1316  yarn start
+ 1317  git branch 
+ 1318  yarn run build
+ 1319  cd api/
+ 1320  git add -A
+ 1321  git commit -m "Background"
+ 1322  git push origin aobltb-production 
+ 1323  ssh root@172.105.90.220
+ 1324  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1325  python newindex.py 
+ 1326  clear
+ 1327  python newindex.py 
+ 1328  clear
+ 1329  python newindex.py 
+ 1330  clear
+ 1331  python newindex.py 
+ 1332  clear
+ 1333  python newindex.py 
+ 1334  clear
+ 1335  python newindex.py 
+ 1336  clear
+ 1337  python newindex.py 
+ 1338  clear
+ 1339  python newindex.py 
+ 1340  clear
+ 1341  python newindex.py 
+ 1342  clear
+ 1343  python newindex.py 
+ 1344  clear
+ 1345  python newindex.py 
+ 1346  clear
+ 1347  python newindex.py 
+ 1348  clear
+ 1349  python newindex.py 
+ 1350  clear
+ 1351  python newindex.py 
+ 1352  clear
+ 1353  python newindex.py 
+ 1354  clear
+ 1355  python newindex.py 
+ 1356  clear
+ 1357  python newindex.py 
+ 1358  clear
+ 1359  python newindex.py 
+ 1360  clear
+ 1361  python newindex.py 
+ 1362  clear
+ 1363  python newindex.py 
+ 1364  clear
+ 1365  python newindex.py 
+ 1366  youtube-dl https://www.youtube.com/watch?v=Ip3X9LOh2dk
+ 1367  git checkout allen 
+ 1368  git merge master 
+ 1369  clear
+ 1370  git branch
+ 1371  git checkout allen 
+ 1372  git checkout master 
+ 1373  git push origin master 
+ 1374  clear
+ 1375  yarn start
+ 1376  git branch
+ 1377  git checkout master 
+ 1378  git status 
+ 1379  git branch develop
+ 1380  clear
+ 1381  git checkout 
+ 1382  git checkout develop 
+ 1383  clear
+ 1384  git status 
+ 1385  clear
+ 1386  git remote 
+ 1387  git remote -v
+ 1388  git branch 
+ 1389  git status 
+ 1390  clear
+ 1391  yarn add cypress --dev
+ 1392  node_modules/.bin/cypress open
+ 1393  youtube-dl https://www.youtube.com/watch?v=abbXE_dkaEg
+ 1394  cd projects/php/
+ 1395  ls
+ 1396  vim index.php 
+ 1397  code .
+ 1398  cd /var/www/
+ 1399  ls
+ 1400  cd /etc/apache2/sites-available/
+ 1401  sudo cp pos.conf phpapps.conf
+ 1402  vim phpapps.conf 
+ 1403  sudo vim phpapps.conf 
+ 1404  sudo a2ensite phpapps.conf 
+ 1405  sudo systemctl reload apache2.service
+ 1406  sudo vim /etc/hosts
+ 1407  cd
+ 1408  tail -f /var/log/apache2/error.log
+ 1409  clear
+ 1410  tail -f /var/log/apache2/error.log
+ 1411  ls
+ 1412  php phpsamplecode.php 
+ 1413  clear
+ 1414  php phpsamplecode.php 
+ 1415  clear
+ 1416  php phpsamplecode.php 'AREA'
+ 1417  clear
+ 1418  php phpsamplecode.php 'AREA'
+ 1419  clear
+ 1420  php phpsamplecode.php
+ 1421  php index.php 
+ 1422  clear
+ 1423  php index.php 
+ 1424  clear
+ 1425  php index.php 
+ 1426  clear
+ 1427  php index.php 
+ 1428  php -v
+ 1429  sudo apt install php7.2-curl 
+ 1430  clear
+ 1431  php index.php 
+ 1432  clear
+ 1433  php index.php 
+ 1434  clear
+ 1435  php index.php 
+ 1436  clear
+ 1437  php index.php 
+ 1438  clear
+ 1439  whereis php.ini
+ 1440  clear
+ 1441  whereis .ini
+ 1442  clear
+ 1443  sudo vim /etc/php/7.2/apache2/php.ini
+ 1444  sudo service apache2 reload 
+ 1445  code .
+ 1446  npm -v
+ 1447  node -v
+ 1448  cd
+ 1449  clear
+ 1450  rm -r coders-world-dev-circle/
+ 1451  sudo rm -r coders-world-dev-circle/
+ 1452  clear
+ 1453  npx create-react-app khoders-world-dev-circle
+ 1454  cd khoders-world-dev-circle/
+ 1455  clear
+ 1456  yarn start
+ 1457  npx create-react-app coders-world-dev-circle
+ 1458  cd coders-world-dev-circle/
+ 1459  yarn start
+ 1460  yarn add react-router-dom
+ 1461  youtube-dl https://www.youtube.com/watch?v=fTFoBr5LJGE
+ 1462  youtube-dl https://www.youtube.com/watch?v=Z78qvpyejQc
+ 1463  youtube-dl https://www.youtube.com/watch?v=8WnGNId62h8
+ 1464  sudo apt-get install mysql-server
+ 1465  clear
+ 1466  mysqladmin -u root password  nuchapt3r
+ 1467  mysqladmin -u root password nuchapt3r
+ 1468  mysql -u root -p
+ 1469  sudo apt update 
+ 1470  sudo apt install mysql-server
+ 1471  sudo mysql_secure_installation 
+ 1472  mysql -u root -p
+ 1473  sudo mysql
+ 1474  clear
+ 1475  sudo mysql
+ 1476  clear
+ 1477  sudo mysql
+ 1478  yarn start
+ 1479  git branch 
+ 1480  youtube-dl https://www.youtube.com/watch?v=NSyQGgXAP3M
+ 1481  sudo mysql
+ 1482  yarn add cypress --dev
+ 1483  node_modules/.bin/cypress open
+ 1484  git branch 
+ 1485  git status 
+ 1486  git add -A
+ 1487  git commit -m "Cypress integration"
+ 1488  clear
+ 1489  git checkout master 
+ 1490  git merge develop 
+ 1491  clear
+ 1492  git checkout develop 
+ 1493  yarn start
+ 1494  tail -f /var/log/apache2/error-asset.log
+ 1495  yarn start
+ 1496  tail -f /var/log/apache2/error-asset.log
+ 1497  tail -f /var/log/apache2/error.log
+ 1498  tail -f /var/log/apache2/error-asset.log
+ 1499  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1500  yarn start
+ 1501  yarn run build
+ 1502  vim nu
+ 1503  yarn run build
+ 1504  yarn start
+ 1505  yarn add node-sass
+ 1506  node_modules/.bin/cypress open
+ 1507  yarn start
+ 1508  git status 
+ 1509  git add -A
+ 1510  git branch 
+ 1511  git commit -m "create the login page"
+ 1512  git remote -v
+ 1513  git remote add allen https://github.com/alleneben/favorite-things.git
+ 1514  git push allen dha
+ 1515  git branch dha
+ 1516  git checkout dha 
+ 1517  git merge develop 
+ 1518  git checkout develop 
+ 1519  git push allen dha 
+ 1520  git status 
+ 1521  git add -A
+ 1522  git commit -m "Changes"
+ 1523  git push origin master 
+ 1524  yarn start
+ 1525  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1526  youtube-dl https://www.youtube.com/watch?v=qSRrxpdMpVc&t=3414s
+ 1527  youtube-dl https://www.youtube.com/watch?v=gyiwFcrVRCM&t=1815s
+ 1528  youtube-dl https://www.youtube.com/watch?v=6ZnfsJ6mM5c
+ 1529  youtube-dl https://www.youtube.com/watch?v=qSRrxpdMpVc&t=3414s
+ 1530  mkdir rn
+ 1531  cd rn/
+ 1532  youtube-dl https://www.youtube.com/watch?v=mkualZPRZCs&t=3942s
+ 1533  cd projects/rn/
+ 1534  clear
+ 1535  ls
+ 1536  cd AweSomeApp/
+ 1537  ls
+ 1538  cd components/
+ 1539  ls
+ 1540  cd ../navigation/
+ 1541  ls
+ 1542  clear
+ 1543  cd
+ 1544  cd projects/rn/
+ 1545  clear
+ 1546  rm -r AweSomeApp/
+ 1547  sudo rm -r AweSomeApp/
+ 1548  clear
+ 1549  npx create-react-native-app share-places
+ 1550  ls
+ 1551  npx create-react-native-app share-places
+ 1552  npm install -g create-react-native-app 
+ 1553  create-react-native-app share-places
+ 1554  cd android/
+ 1555  ./gradlew clean
+ 1556  cd ..
+ 1557  clear
+ 1558  react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1559  npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1560  npx react-native run-android
+ 1561  yarn run android
+ 1562  npm run android
+ 1563  adb devices ices
+ 1564  adb devices
+ 1565  npx react-native start
+ 1566  yarn start
+ 1567  lsof -i:8081
+ 1568  killall -9 9714
+ 1569  lsof -i:8081
+ 1570  kill -9 9714
+ 1571  lsof -i:8081
+ 1572  yarn start
+ 1573  yarn add react-native-geolocation-service
+ 1574  sudo npm uninstall create-react-native-app
+ 1575  npm uninstall create-react-native-app
+ 1576  cd projects/rn/
+ 1577  npx react-natuve init share-places
+ 1578  npx react-native init share-places
+ 1579  npx react-native init shareplaces
+ 1580  cd shareplaces/
+ 1581  npx react-native run-android
+ 1582  sudo ufw status
+ 1583  npx react-native run-android
+ 1584  code .
+ 1585  tail -f /var/log/apache2/error-pos.log 
+ 1586  tail -f /var/log/apache2/error.log
+ 1587  yarn run build
+ 1588  cd api/
+ 1589  git status 
+ 1590  git add -A
+ 1591  git commit -m "woow"
+ 1592  git push origin aobltb-production 
+ 1593  cd ..
+ 1594  yarn run build
+ 1595  cd api/
+ 1596  git status
+ 1597  git add -A
+ 1598  git commit -m "woow"
+ 1599  git push origin aobltb-production 
+ 1600  cd ..
+ 1601  yarn run build
+ 1602  cd api/
+ 1603  git add -A
+ 1604  git commit -m "Corrected endpoint address"
+ 1605  git push origin aobltb-production 
+ 1606  yarn start
+ 1607  yarn run build
+ 1608  cd api/
+ 1609  git add -A
+ 1610  git commit -m "Creating customers under shops and user creation"
+ 1611  git push origin aobltb-production 
+ 1612  cd ..
+ 1613  git status 
+ 1614  git add -A
+ 1615  git branch 
+ 1616  git commit -m "New select field and customer changes"
+ 1617  git push origin aobltd 
+ 1618  clear
+ 1619  git checkout master 
+ 1620  git status 
+ 1621  clear
+ 1622  git checkout aobltd 
+ 1623  clear
+ 1624  yarn start
+ 1625  lsof -i:8081
+ 1626  yarn start
+ 1627  yarn 
+ 1628  yarn add react-navigation
+ 1629  yarn start
+ 1630  yarn add uuid
+ 1631  yarn
+ 1632  yarn start
+ 1633  yarn add react-native-gesture-handler
+ 1634  yarn start
+ 1635  watchman watch-del-aa && react-native start --reset-cache
+ 1636  yarn remove react-navigation
+ 1637  yarn add react-navigation@3.11.0
+ 1638  yarn start
+ 1639  yarn remove react-navigation
+ 1640  yarn add react-navigation
+ 1641  yarn add  --dev react-native-clean-project
+ 1642  react-native clean-project-auto
+ 1643  npx react-native clean-project-auto
+ 1644  yarn start
+ 1645  yarn
+ 1646  yarn start
+ 1647  npx watchman watch-del-aa && react-native start --reset-cache
+ 1648  yarn start --reset-cache
+ 1649  yarn
+ 1650  yarn start
+ 1651  cd ..
+ 1652  rm -r shareplaces/
+ 1653  npx react-native citiesapp
+ 1654  npx react-native init citiesapp
+ 1655  cd citiesapp/
+ 1656  yarn start
+ 1657  yarn start
+ 1658  npx react-native run-android
+ 1659  yarn start
+ 1660  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1661  clear
+ 1662  cd projects/rn/
+ 1663  cd citiesapp/
+ 1664  yarn start
+ 1665  yarn add react-navigation
+ 1666  yarn add uuid
+ 1667  yarn add react-native-gesture-handler
+ 1668  yarn start
+ 1669  import React from 'react';
+ 1670  yarn add react-navigation-stack
+ 1671  clear
+ 1672  yarn start
+ 1673  yarn add react-navigation-tabs
+ 1674  yarn start
+ 1675  npx react-native run-android
+ 1676  yarn start
+ 1677  yarn add react-native-reanimated
+ 1678  npx react-native run-android
+ 1679  yarn start
+ 1680  git status 
+ 1681  git init
+ 1682  clear
+ 1683  git add -A
+ 1684  git commit -m "Initial Commit"
+ 1685  clear
+ 1686  git branch develop
+ 1687  git checkout develop 
+ 1688  clear
+ 1689  git remote add origin https://github.com/alleneben/cities-finder.git
+ 1690  git push origin master 
+ 1691  git push origin develop 
+ 1692  npx react-native run-android
+ 1693  yarn start
+ 1694  git status 
+ 1695  git add -A src/addcity/addcity.js 
+ 1696  git commit -m "Creating the addcity page with its helper methods"
+ 1697  git add -A src/cities/cities.js 
+ 1698  git commit -m "The cities page fails to re-render after it has been created"
+ 1699  git add -A App.js 
+ 1700  git commit -m "cities array and addcity method is passed down to Tabs"
+ 1701  git status 
+ 1702  git add -A src/cities/cities.js 
+ 1703  git status 
+ 1704  git commit -m "The cities page fails to re-render after it has been created"
+ 1705  git status 
+ 1706  git push origin develop 
+ 1707  git checkout master 
+ 1708  git merge develop 
+ 1709  git checkout develop 
+ 1710  clear
+ 1711  npx react-native run-android
+ 1712  yarn start
+ 1713  npx react-native run-android
+ 1714  react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1715  cd android/
+ 1716  react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1717  npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1718  cd ..
+ 1719  npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1720  cd android/
+ 1721  npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1722  cd ..
+ 1723  npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1724  npx react-native run-android
+ 1725  yarn start
+ 1726  npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1727  clear
+ 1728  npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+ 1729  npx react-native run-android
+ 1730  yarn add react-navigation
+ 1731  yarn add react-navigation-stack
+ 1732  yarn add uuid
+ 1733  clear
+ 1734  yarn start
+ 1735  yarn add react-navigation-tabs
+ 1736  npx react-native run-android
+ 1737  yarn start
+ 1738  yarn add react-native-gesture-handler
+ 1739  yarn add react-native-reanimated
+ 1740  yarn start
+ 1741  cd projects/rn/
+ 1742  ls
+ 1743  npx react-native init testapp
+ 1744  cd testapp/
+ 1745  cd ..
+ 1746  cd
+ 1747  cd projects/rn/
+ 1748  clear
+ 1749  npx react-native init citiesapp
+ 1750  cd citiesapp
+ 1751  code .
+ 1752  cd ..
+ 1753  cd rcdev/
+ 1754  cd DHA/
+ 1755  code .
+ 1756  git branch 
+ 1757  git init 
+ 1758  git branch 
+ 1759  git remote add origin https://github.com/alleneben/cities-finder.git
+ 1760  git status 
+ 1761  git commit -m "Initial Commit"
+ 1762  git add -A
+ 1763  git commit -m "Initial Commit"
+ 1764  git branch develop
+ 1765  git push origin develop 
+ 1766  git push --force origin develop 
+ 1767  git checkout 
+ 1768  git merge develop 
+ 1769  git push --force origin master 
+ 1770  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1771  git branch
+ 1772  git status 
+ 1773  git add src/asset/variables.scss 
+ 1774  git commit -m "adding scss variables
+ 1775  git add src/components/footer/ src/components/sidenav/ src/components/topnav/
+ 1776  git commit -m "adding sidenav, topnav and footer"
+ 1777  git add src/pages/mainlayout.js 
+ 1778  git commit -m "main layout page for routing"
+ 1779  git status 
+ 1780  git add -A
+ 1781  git commit -m "Modifications"
+ 1782  git push origin develop 
+ 1783  git branch 
+ 1784  git checkout dha 
+ 1785  git merge develop 
+ 1786  git branch develop 
+ 1787  clear
+ 1788  yarn start
+ 1789  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1790  yarn start
+ 1791  cd rn/
+ 1792  ls
+ 1793  youtube-dl https://www.youtube.com/watch?v=qSRrxpdMpVc&t=3974s
+ 1794  yarn start
+ 1795  mkdir ~/projects/python/kstugrad
+ 1796  cd
+ 1797  cd /var/www/
+ 1798  sudo ln -s ~/projects/python/kstugrad/ kstugrad
+ 1799  cd
+ 1800  cd /etc/apache2/sites-available/
+ 1801  sudo vim kstugrad.conf 
+ 1802  sudo systemctl reload apache2.service 
+ 1803  sudo vim /etc/hosts
+ 1804  sudo vim kstugrad.conf 
+ 1805  sudo systemctl reload apache2.service 
+ 1806  cd
+ 1807  youtube-dl https://www.youtube.com/watch?v=nlk99lcpLj0
+ 1808  code .
+ 1809  cd
+ 1810  sudo a2enmod mpm_prefork cgi
+ 1811  sudo vim /etc/apache2/sites-enabled/kstugrad.conf
+ 1812  sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/kstugrad.conf
+ 1813  cd /etc/apache2/sites-available/
+ 1814  sudo vim kstugrad.conf 
+ 1815  sudo a2ensite kstugrad.conf 
+ 1816  sudo systemctl reload apache2.service 
+ 1817  cd /var/www/
+ 1818  cd kstugrad
+ 1819  ls
+ 1820  sudo vim /etc/hosts
+ 1821  sudo a2ensite kstugrad.conf 
+ 1822  sudo a2dissite kstugrad.conf 
+ 1823  sudo systemctl reload apache2.service 
+ 1824  cd /etc/apache2/sites-available/
+ 1825  sudo vim kstugrad.conf 
+ 1826  sudo a2ensite kstugrad.conf 
+ 1827  sudo systemctl reload apache2.service 
+ 1828  sudo vim /etc/hosts
+ 1829  cd
+ 1830  cd projects/python/kstugrad/
+ 1831  sudo chmod 755 index.py 
+ 1832  cd /etc/apache2/sites-available/
+ 1833  sudo vim kstugrad.conf 
+ 1834  sudo service apache2 reload 
+ 1835  tail -f /var/log/apache2/error.log
+ 1836  cd projects/ng/
+ 1837  git  clone https://github.com/luckydela/kstugrady.git
+ 1838  cd kstugrady/
+ 1839  npm install
+ 1840  ng serve
+ 1841  git branch 
+ 1842  yarn run build
+ 1843  yarn upgrade caniuse-lite browserslist
+ 1844  yarn start
+ 1845  tial -f /var/log/apache2/error.log
+ 1846  tail -f /var/log/apache2/error.log
+ 1847  vim nu 
+ 1848  tail -f /var/log/apache2/error-pos.log 
+ 1849  tail -f /var/log/apache2/error.log
+ 1850  git branch 
+ 1851  yarn start
+ 1852  tail -f /var/log/apache2/error.log
+ 1853  clear
+ 1854  locate werkzeug
+ 1855  clear
+ 1856  vim /etc/apache2/sites-available/kstugrad.conf 
+ 1857  sudo cp /etc/apache2/sites-available/kstugrad.conf wsgikstu.conf
+ 1858  sudo cp /etc/apache2/sites-available/kstugrad.conf /etc/apache2/sites-available/wsgikstu.conf
+ 1859  sudo vim /etc/apache2/sites-available/wsgikstu.conf 
+ 1860  sudo systemctl reload apache2.service 
+ 1861  sudo vim /etc/apache2/sites-available/wsgikstu.conf 
+ 1862  sudo systemctl reload apache2.service 
+ 1863  sudo vim /etc/apache2/sites-available/wsgikstu.conf 
+ 1864  cd /etc/apache2/sites-available/
+ 1865  sudo a2ensite wsgikstu.conf 
+ 1866  sudo systemctl reload apache2.service 
+ 1867  vim wsgikstu.conf 
+ 1868  sudo a2dissite wsgikstu.conf 
+ 1869  sudo rm wsgikstu.conf 
+ 1870  sudo systemctl reload apache2.service 
+ 1871  vim kstugrad.conf 
+ 1872  sudo vim kstugrad.conf 
+ 1873  sudo systemctl reload apache2.service 
+ 1874  sudo vim kstugrad.conf 
+ 1875  sudo systemctl reload apache2.service 
+ 1876  journalctl -xe
+ 1877  sudo vim kstugrad.conf 
+ 1878  sudo systemctl reload apache2.service 
+ 1879  journalctl -xe
+ 1880  sudo vim kstugrad.conf 
+ 1881  sudo systemctl reload apache2.service 
+ 1882  sudo apt update 
+ 1883  locate mod_alias.so
+ 1884  sudo vim kstugrad.conf 
+ 1885  sudo systemctl reload apache2.service 
+ 1886  journalctl -xe
+ 1887  sudo vim kstugrad.conf 
+ 1888  locate mod_alias.so
+ 1889  sudo apt-get install libapache2-mod-wsgi-py3 
+ 1890  sudo vim kstugrad.conf 
+ 1891  sudo apt-get install libapache2-mod-wsgi-py3 
+ 1892  sudo systemctl reload apache2.service 
+ 1893  sudo apt-get remove libapache2-mod-wsgi-py3 
+ 1894  sudo apt-get remove libapache2-mod-wsgi
+ 1895  clear
+ 1896  sudo apt-get install libapache2-mod-wsgi-py3 
+ 1897  sudo apt-get remove libapache2-mod-wsgi-py3
+ 1898  sudo systemctl reload apache2.service 
+ 1899  sudo a2enmod wsgi
+ 1900  sudo apt-get install libapache2-mod-wsgi
+ 1901  dpkg -l libapache2-mod-wsgi
+ 1902  dpkg -l libapache2-mod-wsgi-py3
+ 1903  sudo a2enmod mpm_prefork 
+ 1904  sudo a2enmod mod-wsgi
+ 1905  sudo systemctl reload apache2.service 
+ 1906  sudo vim kstugrad.conf 
+ 1907  sudo systemctl reload apache2.service 
+ 1908  sudo vim kstugrad.conf 
+ 1909  sudo systemctl reload apache2.service 
+ 1910  sudo systemctl restart apache2.service 
+ 1911  vim kstugrad.conf 
+ 1912  sudo cp kstugrad.conf ~/projects/python/kstugrad/kstugrad.conf
+ 1913  cd
+ 1914  ssh -L 3333:localhost:5432 allen@41.204.38.5
+ 1915  sudo apt-get update 
+ 1916  sudo apt install python libexpat1
+ 1917  sudo apt purge libapache2-mod-wsgi
+ 1918  sudo apt install python libexpat1
+ 1919  sudo apt autoremove libapache2-mod-wsgi
+ 1920  sudo apt install libexpat1
+ 1921  sudo apt-get update 
+ 1922  sudo apt install apache2-utils 
+ 1923  sudo apt install libapache2-mod-wsgi
+ 1924  sudo systemctl restart apache2
+ 1925  sudo update-alternatives --config python
+ 1926  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6
+ 1927  sudo update-alternatives --set python /usr/bin/python3.6
+ 1928  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6
+ 1929  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
+ 1930  sudo update-alternatives --config python
+ 1931  sudo update-alternatives --set python /usr/bin/python3.6
+ 1932  sudo apt install libapache2-mod-wsgi-py3 
+ 1933  python
+ 1934  clear
+ 1935  sudo pip install python-magic
+ 1936  sudo pip install python3-magic
+ 1937  sudo pip install python-magic
+ 1938  pip install python-magic
+ 1939  sudo pip install python-magic
+ 1940  pip install python-magic
+ 1941  sudo su -i
+ 1942  sudo su 
+ 1943  sudo pip3 install python-magic
+ 1944  sudo su 
+ 1945  tail -f /var/log/apache2/access.log
+ 1946  tail -f /var/log/apache2/error.log
+ 1947  sudo systemctl restart apache2
+ 1948  ng serve
+ 1949  cd projects/ng/kstugrady/
+ 1950  ng serve
+ 1951  cd
+ 1952  cd projects/pos
+ 1953  yarn start
+ 1954  cd
+ 1955  cd /etc/apache2/sites-available/
+ 1956  sudo vim kstugrad.conf 
+ 1957  sudo service apache2 reload 
+ 1958  sudo vim kstugrad.conf 
+ 1959  sudo service apache2 reload 
+ 1960  sudo vim kstugrad.conf 
+ 1961  sudo service apache2 reload 
+ 1962  sudo vim kstugrad.conf 
+ 1963  sudo service apache2 reload 
+ 1964  tail -f /var/log/apache2/error.log
+ 1965  sudo pip install oslo_middleware
+ 1966  sudo su
+ 1967  tail -f /var/log/apache2/error.log
+ 1968  ng build -w
+ 1969  ng build
+ 1970  ng build && cp -r dist/ ~/projects/python/kstugrad/
+ 1971  ng build && cp -r dist/gradPort/ ~/projects/python/kstugrad/
+ 1972  ng build && cp -r dist/gradPort/* ~/projects/python/kstugrad/
+ 1973  cd /var/www/
+ 1974  sudo rm -r kstugrad/
+ 1975  ls
+ 1976  cd kstugrad
+ 1977  ls
+ 1978  cd
+ 1979  cd projects/python/kstugrad/
+ 1980  ls
+ 1981  cd /var/www/
+ 1982  cd kstugrad
+ 1983  ls
+ 1984  tail -f /var/log/apache2/error.log
+ 1985  cd projects/python/kstugrad/
+ 1986  ng build --w && cp -r dist/gradPort/* ~/projects/python/kstugrad/
+ 1987  cd ..
+ 1988  cd ng/kstugrady/
+ 1989  ng build --w && cp -r dist/gradPort/* ~/projects/python/kstugrad/
+ 1990  ng build --watch && cp -r dist/gradPort/* ~/projects/python/kstugrad/
+ 1991  ng build  && cp -r dist/gradPort/* ~/projects/python/kstugrad/
+ 1992  clear
+ 1993  tail -f /var/log/apache2/error.log
+ 1994  python
+ 1995  clear
+ 1996  python
+ 1997  history > hellooo

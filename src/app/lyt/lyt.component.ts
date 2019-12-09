@@ -53,7 +53,11 @@ profile(){
 
 
     window.localStorage.clear();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
+    setTimeout(()=>{
+      window.location.reload()
+
+    },1000)
         
       } else (
         /* Read more about handling dismissals below */

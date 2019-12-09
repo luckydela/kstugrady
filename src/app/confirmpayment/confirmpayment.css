@@ -6,9 +6,6 @@
      text-align: left;
 
 }
-.tada {
-    padding: 20px;
-}
 .img{
     height: 120px;
     width: 300px;
@@ -17,13 +14,11 @@
      margin-right: auto;   
 }
 
-
-/* 
 .btn{
     background:  rgb(41, 40, 7);
-    width: 200px;
-    margin-left:80px;
-} */
+    width: 500px;
+    margin-left: 5%;
+}
 
 .btn:hover{
 background: #2f3308;

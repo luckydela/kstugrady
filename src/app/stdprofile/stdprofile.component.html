@@ -12,74 +12,73 @@
            <div class="card-body">
              <form >
                <div class="row">
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                    <div class="form-group">
-                     <label class="bmd-label-floating">Student number</label>
-                     <input type="text"id="company" value="{{userdata.studentno}}" class="form-control" disabled>
+                     <label class="bmd-label-floating">Student Number</label>
+                     <input type="text"id="company" name="studentno" [ngModel]="userdata.studentno" class="form-control" disabled>
                    </div>
                  </div>
-             <div class="col-md-4">
+             <div class="col-md-6">
                    <div class="form-group">
-                     <label class="bmd-label-floating">Index number</label>
-                     <input type="text" class="form-control"  value="{{userdata.indexno}}" disabled>
+                     <label class="bmd-label-floating">Index Number</label>
+                     <input type="text" class="form-control" name="indexno"  [ngModel]="userdata.indexno" disabled>
                    </div>
                  </div>
                  <div class="col-md-4">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Last name</label>
-                    <input type="text" class="form-control"  value="{{userdata.lastname}}" disabled>
+                    <label class="bmd-label-floating">Surname</label>
+                    <input type="text" class="form-control" name="lastname"  [ngModel]="userdata.lastname" disabled>
                   </div>
                 </div>
-                 <div class="col-md-6">
+
+                 <div class="col-md-4">
                    <div class="form-group">
-                     <label class="bmd-label-floating">First name</label>
-                     <input type="email" id="emailid"  value="{{userdata.firstname}}" class="form-control" disabled>
+                     <label class="bmd-label-floating">First Name</label>
+                     <input type="email" id="emailid" name="firstname" [ngModel]="userdata.firstname" class="form-control" disabled>
                    </div>
                  </div>
-                 <div class="col-md-6">
+                 <div class="col-md-4">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Other name</label>
-                    <input type="email" id="emailid"  value="{{userdata.othername}}" class="form-control" disabled>
+                    <label class="bmd-label-floating">Gender</label>
+                    <input type="text" class="form-control" name="gender"  [ngModel]="userdata.gender" disabled>
                   </div>
                 </div>
                </div>
                <div class="row">
                  <div class="col-md-6">
                    <div class="form-group">
-                     <label class="bmd-label-floating">Year of Start</label>
-                     <input type="text"  id="firstname" value="{{userdata.yos}}" class="form-control" disabled>
+                     <label class="bmd-label-floating">Year of Admission</label>
+                     <input type="text"  id="firstname" name="entryyear" [ngModel]="userdata.entryyear" class="form-control" disabled>
                    </div>
                  </div>
                  <div class="col-md-6">
                    <div class="form-group">
-                     <label class="bmd-label-floating">year of graduation</label>
-                     <input type="text" id="lastname" value="{{userdata.yog}}" class="form-control" disabled>
+                     <label class="bmd-label-floating">Year of Graduation</label>
+                     <input type="text" id="lastname" name="exityear" [ngModel]="userdata.exityear" class="form-control" disabled>
                    </div>
                  </div>
                </div>
         
                <div class="row">
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                    <div class="form-group">
                      <label class="bmd-label-floating">Faculty</label>
-                     <input type="text" id="residence" value="{{userdata.faculty}}" class="form-control" disabled>
+                     <input type="text" id="residence" name="faculty" [ngModel]="userdata.faculty" class="form-control" disabled>
                    </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                    <div class="form-group">
                      <label class="bmd-label-floating">Department</label>
-                     <input type="text"  id="pass" value="{{userdata.dpt}}" class="form-control" disabled>
-                   </div>
-                 </div>
-             <div class="col-md-4">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">Date of birth</label>
-                     <input type="text"  id="pass" value="{{userdata.dob}}" class="form-control" disabled>
+                     <input type="text"  id="pass" name="department" [ngModel]="userdata.department" class="form-control" disabled>
                    </div>
                  </div>
                </div>
 
-               <button type="submit" class="btn btn-sm pull-right" (click)="paymentoption()">Click to Verify Payment</button>
+               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 0" (click)="paymentoption()">Proceed to payment</button>
+               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 1" (click)="confirmpayment()">Confirm Payment</button>
+               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 2" (click)="attendance()">{{ confirmattendance }}</button>
+               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 2" (click)="print()">Print</button>
+
                <div class="clearfix"></div>
              </form>
            </div>
@@ -93,12 +92,14 @@
              </a>
            </div>
            <div class="card-body">
-             <h6 class="card-category" style="color:rgb(41, 40, 7);">Program Studied</h6>
-             <h4 class="card-title"> {{userdata.pgrmstudied}}</h4>
-             <h6 class="card-category" style="color:rgb(41, 40, 7);">Completion Status</h6>
-             <h4 class="card-title"> {{userdata.comstatus}}</h4>
+             <h6 class="card-category" style="color:rgb(41, 40, 7);">Programme</h6>
+             <h4 class="card-title"> {{programme}}</h4>
+             <h6 class="card-category" style="color:rgb(41, 40, 7);">Paid Status</h6>
+             <h4 class="card-title"> {{paymentstatus}}</h4>
+             <h6 class="card-category" style="color:rgb(41, 40, 7);">Attending Status</h6>
+             <h4 class="card-title"> {{attendancestatus}}</h4>
              <p class="card-description">
-               Member of Kumasi Technical University
+               Graduand of Kumasi Technical University
              </p>
            </div>
          </div>
