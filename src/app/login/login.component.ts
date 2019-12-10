@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
         } else if(rd['error']) {
           this.ssv.dialog(rd['error'],'Error')
         } else {
+          // let rdd = rd[0].gender === 1 ? 'MALE' : 'FEMALE';
           localStorage.setItem('ud',JSON.stringify(rd))
           localStorage.setItem('isLoggedInStatus', JSON.stringify({'sts':true}));
           this.router.navigate(['layout/stdprofile']);

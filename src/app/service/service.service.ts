@@ -9,7 +9,8 @@ import swal from 'sweetalert2';
 })
 export class ServiceService {
 
-  devurl:any = 'http://kstugraduate.loc/svs/';
+  // devurl:any = 'http://kstugraduate.loc/svs/';
+  devurl:any = 'http://172.16.7.16/svs/';
   isLoggedInStatus:any;
   rd:Array<any>
 

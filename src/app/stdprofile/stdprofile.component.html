@@ -1,4 +1,3 @@
- <!-- End Navbar -->
  <br><br><br>
  <div class="content">
      <div class="container-fluid"> 
@@ -40,7 +39,7 @@
                  <div class="col-md-4">
                   <div class="form-group">
                     <label class="bmd-label-floating">Gender</label>
-                    <input type="text" class="form-control" name="gender"  [ngModel]="userdata.gender" disabled>
+                    <input type="text" id="gender" class="form-control" name="gender"  [ngModel]="gender" disabled>
                   </div>
                 </div>
                </div>
@@ -75,9 +74,9 @@
                </div>
 
                <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 0" (click)="paymentoption()">Proceed to payment</button>
-               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 1" (click)="confirmpayment()">Confirm Payment</button>
-               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 2" (click)="attendance()">{{ confirmattendance }}</button>
-               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 2" (click)="print()">Print</button>
+               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus == 1" (click)="confirmpayment()">Confirm Payment</button>
+               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus == 2" (click)="attendance()">{{ confirmattendance }}</button>
+               <!-- <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 2" (click)="print()">Print</button> -->
 
                <div class="clearfix"></div>
              </form>
@@ -95,7 +94,7 @@
              <h6 class="card-category" style="color:rgb(41, 40, 7);">Programme</h6>
              <h4 class="card-title"> {{programme}}</h4>
              <h6 class="card-category" style="color:rgb(41, 40, 7);">Paid Status</h6>
-             <h4 class="card-title"> {{paymentstatus}}</h4>
+             <h4 class="card-title"> {{paidstatus}}</h4>
              <h6 class="card-category" style="color:rgb(41, 40, 7);">Attending Status</h6>
              <h4 class="card-title"> {{attendancestatus}}</h4>
              <p class="card-description">

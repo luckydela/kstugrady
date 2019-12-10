@@ -35,7 +35,7 @@ export class StaffComponent implements OnInit {
         } else {
           localStorage.setItem('ud',JSON.stringify(rd))
           localStorage.setItem('isLoggedInStatus', JSON.stringify({'sts':true}));
-          let role = rd[0].role === 'plan' ? 'plancm' : 'findpt'
+          let role = rd[0].staffrole === 'plan' ? 'plancm' : 'findpt'
           this.router.navigate(['layout/'+role]);
         }
       },err => {
