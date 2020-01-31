@@ -10,7 +10,7 @@ import swal from 'sweetalert2';
 export class ServiceService {
 
   // devurl:any = 'http://kstugraduate.loc/svs/';
-  devurl:any = 'http://172.16.7.16/svs/';
+  devurl:any = 'https://grad.kstu.edu.gh/svs/';
   isLoggedInStatus:any;
   rd:Array<any>
 
@@ -66,8 +66,18 @@ export class ServiceService {
   payment(ud:any){
     let fm = new HttpParams()
     .set("studentno",ud.studentno)
-    .set("f","payment")
+    .set("f","controller")
     .set("m","send")
+
+    return this.http.post<Array<any>>(this.devurl,fm,this.options)
+  }
+  cashpayment(studentno:any,sagecode:any,ud:any){
+    let fm = new HttpParams()
+    .set("studentno",studentno)
+    .set("sagecode",sagecode)
+    .set("uid",ud.recid)
+    .set("f","controller")
+    .set("m","cashoffice")
 
     return this.http.post<Array<any>>(this.devurl,fm,this.options)
   }
@@ -75,7 +85,7 @@ export class ServiceService {
     let fm = new HttpParams()
     .set("studentno",ud.studentno)
     .set("rcptno",rcptno)
-    .set("f","payment")
+    .set("f","controller")
     .set("m","confirm")
 
     return this.http.post<Array<any>>(this.devurl,fm,this.options)
@@ -83,7 +93,8 @@ export class ServiceService {
   confirmattendance(ud:any){
     let fm = new HttpParams()
     .set("studentno",ud.studentno)
-    .set("f","payment")
+    .set("mobileno",ud.mobileno)
+    .set("f","controller")
     .set("m","attendance")
 
     return this.http.post<Array<any>>(this.devurl,fm,this.options)
@@ -96,10 +107,27 @@ export class ServiceService {
 
     return this.http.post<Array<any>>(this.devurl,fm,this.options)
   }
+  fetchdash(method:any){
+    let fm = new HttpParams()
+    .set("f","controller")
+    .set("m",method)
+
+    return this.http.post<Array<any>>(this.devurl,fm,this.options)
+  }
+  updategown(sno:any,gwn:any,ud:any){
+    let fm = new HttpParams()
+    .set("sno",sno)
+    .set("gwn",gwn)
+    .set("uid",ud.recid)
+    .set("f","controller")
+    .set("m","updategown")
+
+    return this.http.post<Array<any>>(this.devurl,fm,this.options)
+  }
   dialog(msg:any,title:any){
     const swalWithBootstrapButtons = swal.mixin({
       customClass: {
-        confirmButton: 'btn btn-success',
+        confirmButton: 'btn btn-primary',
         cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false

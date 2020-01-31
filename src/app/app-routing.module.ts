@@ -7,6 +7,7 @@ import { StaffComponent } from './staff/staff.component';
 import {StdprofileComponent} from './stdprofile/stdprofile.component';
 import { FinportalComponent } from './finportal/finportal.component';
 import { PlcportalComponent } from './plcportal/plcportal.component';
+import { EstateComponent } from './estate/estate.component';
 import { MomopayoptionComponent } from './momopayoption/momopayoption.component';
 import { ConfirmpaymentComponent } from './confirmpayment/confirmpayment.components';
 import { ConfirmattendanceComponent } from './confirmattendance/confirmattendance.components';
@@ -19,19 +20,20 @@ const routes: Routes = [
   {path: '', component: LandingComponent},
   {path:'login', component: LoginComponent},
   {path: 'staff', component: StaffComponent},
-  {path:'layout', 
-  component:LytComponent,
-  canActivateChild: [AuthGuard],
-  children:[
-    {path:'stdprofile', component:StdprofileComponent},
-    {path:'findpt', component: FinportalComponent},
-    {path:'plancm', component: PlcportalComponent},
-    {path:'makepayment', component: MomopayoptionComponent},
-    {path:'confirmpayment', component: ConfirmpaymentComponent},
-    {path:'confirmattendance', component: ConfirmattendanceComponent},
-
-  ]
-},
+  {
+    path:'', 
+    component:LytComponent,
+    canActivateChild: [AuthGuard],
+    children:[
+      {path:'stdprofile', component:StdprofileComponent},
+      {path:'findpt', component: FinportalComponent},
+      {path:'plancm', component: PlcportalComponent},
+      {path:'est', component: EstateComponent},
+      {path:'makepayment', component: MomopayoptionComponent},
+      {path:'confirmpayment', component: ConfirmpaymentComponent},
+      {path:'confirmattendance', component: ConfirmattendanceComponent},
+    ]
+  },
 ];
 
 @NgModule({
@@ -43,4 +45,4 @@ export class AppRoutingModule { }
 
 export const routeComponent=[LandingComponent, LytComponent, LoginComponent,StaffComponent,
    StdprofileComponent, FinportalComponent, PlcportalComponent, MomopayoptionComponent,
-   ConfirmattendanceComponent,ConfirmpaymentComponent]
+   ConfirmattendanceComponent,ConfirmpaymentComponent,EstateComponent]

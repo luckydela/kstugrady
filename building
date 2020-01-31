@@ -1,0 +1,1 @@
+ng build  && cp -r dist/gradPort/* ~/projects/python/kstugrad/app/

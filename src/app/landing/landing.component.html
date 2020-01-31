@@ -1,20 +1,39 @@
-<body>
-  <video autoplay muted loop id="myVideo">
-      <source src="assets/img/Workaholic.mp4" type="video/mp4">
-  </video>
-  <div class="sidenav">
-    <div class="login-main-text">
-        <h2 class="card-title">KsTU Graduation Platform</h2>
-        <img class="img" style=" border-radius: 1000px; width: 120px;  border: 5px solid rgb(250, 250, 250);" src="assets/img/logo.jpeg"/>
+<header class="showcase">
+    <div class="showcase-top">
+        <img src="assets/img/logo.jpeg"  alt="KsTU" >
+        <!-- <a href="#" class="btn btn-rounded">Login</a> -->
     </div>
- </div>
- <div class="main">
-    <button type="submit" class="btn btn-round btn-block" (click)="getStarted('student')">Student</button>
-    <button type="submit" class="btn btn-round btn-block" (click)="getStarted('staff')">Staff</button>
- </div>
-</body>
+    <div class="showcase-content">
+        <h1>Kumasi Technical University</h1>
+        <p>Graduation Portal</p>
+        <button  (click)="getStarted('login')" class="btn btn-primary btn-lg">
+            Student <i class="fas fa-chevron-right btn-icon"></i>
+        </button>
+        <button id="staff"  (click)="getStarted('staff')" class="btn btn-danger btn-lg">
+            Staff     <i class="fas fa-chevron-right btn-icon"></i>
+        </button>
+        Contact KsTU-ICT Directorate or Call 0241171126 for Support
+    </div>
+    <!-- <div class="instruction">
+        <h5>INSTRUCTIONS FOR MOMO PAYMENTS</h5>
+        <p>1. Click on <strong>STUDENT</strong></p>
+        <p>2. Enter your <strong>STUDENT NUMBER</strong> and click on <strong>SUBMIT</strong></p>
+        <p>3. Click on <strong>PROCEED TO PAYMENT</strong></p>
+        <p>4. Now Click on <strong>MAKE MOMO PAYMENT</strong></p>
+        <p>5. Wait for the MOMO Platform to load and select <strong>PAY WITH MOBILE</strong></p>
+        <p>6. Choose your MOMO vendor, enter your MOMO phone number and click <strong>PAY</strong></p>
+        <p>7. Wait for the prompt on your phone and enter your 4 digit Authorization PIN Code (XXXX).</p>
+        <p>8. After the transaction completes you will see your receiptno on the screen</p>
+        <p>9. Click on <strong>PROCEED</strong></p>
+        <p>10. Click on <strong>Attend graduation</strong>, if you are attending January, 2020 graduation.</p>
+        <p>11. Click on <strong>Not attend graduation</strong>, if you are not attending January, 2020 graduation.</p>
+        <p>12. Click on <strong>PRINT</strong> for your receipt printout.</p>
 
-
-
-
-
+        <p>
+            <strong>
+                NB: All Receipt printout are not to be submitted to the University; it is meant for personal
+                records.
+            </strong>
+        </p>
+    </div> -->
+</header>

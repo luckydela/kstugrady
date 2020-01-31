@@ -4,18 +4,20 @@ import swal from 'sweetalert2';
 import { ServiceService } from '../service/service.service';
 
 @Component({
-  selector: 'app-plcportal',
-  templateUrl: './plcportal.component.html',
-  styleUrls: ['./plcportal.component.css']
+  selector: 'app-estate',
+  templateUrl: './estate.component.html',
+  styleUrls: ['./estate.component.css']
 })
-export class PlcportalComponent implements OnInit {
+export class EstateComponent implements OnInit {
   atd:any = 0;
   ntd:any = 0;
   tot:any = 0;
   paid:any = 0;
+  aloc:any = 0;
   showsearch:boolean = true;
   showlist:boolean = false;
   searchtext:string = 'Search';
+  savetext:string = 'Save';
   studentno:any='';
   disable:boolean = false;
 
@@ -29,6 +31,8 @@ export class PlcportalComponent implements OnInit {
   gender:string;
   mobile:any='';
   tel:any;
+  gown:any;
+  gownstate:any;
 
   firstname;
   lastname;
@@ -44,16 +48,18 @@ export class PlcportalComponent implements OnInit {
 
   ngOnInit() {
     this.fetchparams()
+    
   }
 
   fetchparams(){
     this.ssv.fetchdash('academic')
     .subscribe(rd => {
-      
+
         this.tot = rd[0]['tot'];
         this.atd = rd[0]['atd'];
         this.ntd = rd[0]['ntd'];
         this.paid = rd[0]['paid'];
+        this.aloc = rd[0]['aloc']
     },err => {
       this.ssv.dialog(err,'Error')
     })
@@ -102,7 +108,7 @@ export class PlcportalComponent implements OnInit {
           this.attendancestatus = rd[0].attendancestatus === 1 ? 'ATTENDING' : 'NOT ATTENDING';
           this.mobile = rd[0].mobileno;
           this.tel = rd[0].mobileno;
-
+          this.gownstate = rd[0].gown === 0 ? 'GOWN NOT ALLOCATED' : 'GOWN ALLOCATED';
           this.studentno = ''
         }
       },err=>{
@@ -111,9 +117,38 @@ export class PlcportalComponent implements OnInit {
         this.searchtext = 'Search'
       })
   }
+  dataChanged($event){
+    this.gown
+  }
   close() {
     this.result = false;
     this.showsearch = true;
+  }
+  save() {
+    if(this.gown === undefined) return this.ssv.dialog('Select Gown Allocation','Message');
+    this.disable = true
+    this.savetext = 'Processing ...'
+    this.userdata=JSON.parse(localStorage.getItem('ud'))[0];
+    this.ssv.updategown(this.sno,this.gown,this.userdata)
+      .subscribe(rd => {
+        this.disable = false
+        this.savetext = 'Search'
+        if(rd === null){
+          this.ssv.dialog('We could not find a student with studentno:: '+this.studentno,'Message')
+        } else if(rd['error']) {
+          this.ssv.dialog(rd['error'],'Error')
+        } else {
+          this.result = true;
+          this.showsearch = false;
+          this.user = rd[0];
+          this.gownstate = rd[0].gown === 0 ? 'GOWN NOT ALLOCATED' : 'GOWN ALLOCATED';
+          this.fetchparams()
+        }
+      },err=>{
+        this.disable = false;
+        this.ssv.dialog(err,'Error')
+        this.savetext = 'Search'
+      })
   }
 
 }

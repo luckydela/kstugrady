@@ -22,7 +22,7 @@ export class AppComponent {
 
     } else {
       if(JSON.parse(localStorage.getItem('isLoggedInStatus'))['sts']){
-        this.router.navigate(['layout/stdprofile']);
+        this.router.navigate([JSON.parse(localStorage.getItem('isLoggedInStatus'))['ctx']]);
       }
     }
     this.start()

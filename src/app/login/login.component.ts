@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   }
   rd = []
   disable:boolean = false
+  btntext:string = 'Submit'
   constructor(private router: Router, private ssv: ServiceService) { }
 
   ngOnInit() {
@@ -22,29 +23,33 @@ export class LoginComponent implements OnInit {
 
   stdlogin(){
     this.disable = true
-    swal.showLoading()
+    // swal.showLoading()
     if(this.usr.studentno === ''){
       this.disable = false
-      swal.hideLoading()
+      // swal.hideLoading()
       this.ssv.dialog('Enter your Student Number','Error')
     } else {
+      this.btntext = 'Processing ...'
       this.ssv.login(this.usr)
       .subscribe(rd => {
 
         this.disable = false
-        swal.hideLoading()
+        this.btntext = 'Submit'
+        // swal.hideLoading()
         if(rd === null){
           this.ssv.dialog('We could not find a student with studentno:: '+this.usr.studentno,'Error')
+          
         } else if(rd['error']) {
           this.ssv.dialog(rd['error'],'Error')
         } else {
           // let rdd = rd[0].gender === 1 ? 'MALE' : 'FEMALE';
           localStorage.setItem('ud',JSON.stringify(rd))
-          localStorage.setItem('isLoggedInStatus', JSON.stringify({'sts':true}));
-          this.router.navigate(['layout/stdprofile']);
+          localStorage.setItem('isLoggedInStatus', JSON.stringify({'sts':true,'ctx':'stdprofile'}));
+          this.router.navigate(['stdprofile']);
         }
       },err => {
-        swal.hideLoading()
+        // swal.hideLoading()
+        this.btntext = 'Submit'
         this.disable = false
         this.ssv.dialog(err,'Error')
         // this.router.navigate(['layout/stdprofile']);

@@ -22,7 +22,7 @@ export class ConfirmattendanceComponent implements OnInit {
     this.disable = true
     const swalWithBootstrapButtons = swal.mixin({
       customClass: {
-        confirmButton: 'btn btn-success',
+        confirmButton: 'btn btn-primary',
         cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false
@@ -30,8 +30,8 @@ export class ConfirmattendanceComponent implements OnInit {
     
 
     swalWithBootstrapButtons.fire({
-      title: 'Attendance',
-      text: "After this stage you cannot undo your action. Are you sure you want to proceed? ",
+      title: 'Graduation Attendance',
+      text: "Are you sure you want to proceed? ",
       showCancelButton: true,
       confirmButtonText: 'Yes, Proceed',
       cancelButtonText: 'No, Cancel!',
@@ -42,13 +42,13 @@ export class ConfirmattendanceComponent implements OnInit {
         this.ssv.confirmattendance(this.userdata)
         .subscribe(rd => {
           this.disable = false
-          this.btntext = 'Confirm Attendance'
+          this.btntext = 'Confirm Your Attendance'
           if(rd === null){
             this.ssv.dialog('::You cannot attend the graduation::','Error')
           } else if(rd['error']) {
             this.ssv.dialog(rd['error'],'Error')
           } else {
-            this.router.navigate(['layout/stdprofile']);
+            this.router.navigate(['stdprofile']);
           }
           
          

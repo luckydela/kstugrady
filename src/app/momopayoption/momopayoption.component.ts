@@ -9,10 +9,10 @@ import { ServiceService } from '../service/service.service';
   styleUrls: ['./momopayoption.component.css']
 })
 export class MomopayoptionComponent implements OnInit {
-  amount=200.00;
+  amount=360.50;
   userdata:any;
   disable:boolean = false
-  btntext:string = 'Make Momo Payment'
+  btntext:string = 'Submit'
   constructor(private router: Router, private ssv:ServiceService) { }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class MomopayoptionComponent implements OnInit {
     this.disable = true
     const swalWithBootstrapButtons = swal.mixin({
       customClass: {
-        confirmButton: 'btn btn-success',
+        confirmButton: 'btn btn-primary',
         cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false
@@ -44,8 +44,8 @@ export class MomopayoptionComponent implements OnInit {
         this.ssv.payment(this.userdata)
         .subscribe(rd => {
           this.disable = false
-          this.btntext = 'Make Momo Payment'
-          console.log(rd);
+          this.btntext = 'Submit'
+          // console.log(rd);
           
           if(rd['code'] === 600){
             this.ssv.dialog(rd['reason'],rd['status'])
@@ -68,11 +68,7 @@ export class MomopayoptionComponent implements OnInit {
         result.dismiss === swal.DismissReason.cancel
         this.disable = false
       }
-    })
-   
-     
-     
-     
+    }) 
   }
 
   bankverifypayment(){
@@ -81,7 +77,7 @@ export class MomopayoptionComponent implements OnInit {
       '...Accept to register and print graduation letter',
       'success'
     )
-    this.router.navigate(['layout/stdprofile']);
+    this.router.navigate(['stdprofile']);
 
   }
 

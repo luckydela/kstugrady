@@ -12,13 +12,17 @@
       <h1>Graduands Attending</h1>
       <span>{{atd}}</span>Students
     </div>
-    <div class="card">
+    <!-- <div class="card">
       <h1>Graduands Not Attending</h1>
       <span>{{ntd}}</span>Students
-    </div>
+    </div> -->
     <div class="card">
       <h1>Paid</h1>
       <span>{{paid}}</span>Students
+    </div>
+    <div class="card">
+      <h1>Allocated Gowns</h1>
+      <span>{{aloc}}</span>Students
     </div>
   </div>
   <div class="search">
@@ -46,10 +50,19 @@
       <span id="detail">{{faculty}}</span>
       <span id="detail" class="status">{{paidstatus}}</span>
       <span id="detail" class="status">{{attendancestatus}}</span>
-
-      <div>
-          <button type="submit" [disabled]="disable" class="btn btn-danger"   (click)="close()">Close</button>
-      </div>
+      <span id="detail" class="status">{{gownstate}}</span>
+      <div class="form-group">
+        <label>Gown Allocation</label>
+        <select name="gown" [(ngModel)]="gown" (ngModelChange)="dataChanged($event)">
+            <option   [value]="1" >Allocated</option>
+            <option   [value]="0" >Not Allocated</option>
+        </select>
+        <!-- <input type="text" [(ngModel)]="gown" name="gown" placeholder="Your Active Mobile Number" required> -->
+    </div>
+    <div>
+      <button type="submit" [disabled]="disable" class="btn btn-danger"   (click)="close()">Close</button>
+      <button type="submit" [disabled]="disable" class="btn btn-danger"   (click)="save()">{{savetext}}</button>
+    </div>
     </div>
   </div>
   

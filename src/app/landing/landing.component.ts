@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-landing',
@@ -8,20 +9,18 @@ import {Router} from '@angular/router';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(private router: Router) {
-    console.log('jkkk');
+  constructor(private router: Router, private ssv: ServiceService) {
+
     
    }
 
   ngOnInit() {
   }
 
-  getStarted(role:any){
-    if(role === 'student'){
-      this.router.navigate(['/login'])
-    } else {
-      this.router.navigate(['/staff'])
-    }
+  getStarted(route:any){
+    if(route === 'login') return this.ssv.dialog('The system has been closed for graduation registration','Message')
+
+      this.router.navigate([route])
   }
 
 }

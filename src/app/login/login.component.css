@@ -1,31 +1,38 @@
-.logincard{
-    display: block; 
-    margin-left:  auto;
-     margin-right: auto; 
-     margin-top: 190px;
-     text-align: left;
+.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-}
-.tada {
-    padding: 20px;
-}
-.img{
-    height: 120px;
-    width: 300px;
-    display: block; 
-    margin-left:  auto;
-     margin-right: auto;   
+    height: 100vh;
+    background: #ffffff;
 }
 
-
-/* 
-.btn{
-    background:  rgb(41, 40, 7);
-    width: 200px;
-    margin-left:80px;
-} */
-
-.btn:hover{
-background: #2f3308;
+.login-top {
+    position: relative;
+    height: 90px;
+    margin-top: 90px;
+}
+.login-top img{
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    /* top: 10%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button {
+    width:100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: #19153a;
+    font-size: 1.5rem;
 }
 

@@ -18,6 +18,7 @@ export class StaffComponent implements OnInit {
   constructor(private router: Router, private ssv: ServiceService) { }
 
   ngOnInit() {
+    
   }
 
   stdlogin(){
@@ -34,9 +35,9 @@ export class StaffComponent implements OnInit {
           this.ssv.dialog('We could not find the user :: '+this.usr.unm,'Error')
         } else {
           localStorage.setItem('ud',JSON.stringify(rd))
-          localStorage.setItem('isLoggedInStatus', JSON.stringify({'sts':true}));
-          let role = rd[0].staffrole === 'plan' ? 'plancm' : 'findpt'
-          this.router.navigate(['layout/'+role]);
+          let role = rd[0].staffrole === 'plan' ? 'plancm' : rd[0].staffrole === 'fin' ? 'findpt' : 'est'
+          localStorage.setItem('isLoggedInStatus', JSON.stringify({'sts':true,'ctx':role}));
+          this.router.navigate([role]);
         }
       },err => {
         this.disable = false
@@ -50,6 +51,9 @@ export class StaffComponent implements OnInit {
   }
   print(){
 
+  }
+  test(){
+    this.router.navigate(['plancm']);
   }
 
 }

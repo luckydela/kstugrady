@@ -28,24 +28,24 @@ export class LytComponent implements OnInit {
   }
 
 profile(){
-  this.router.navigate(['layout/stdprofile']);
+  this.router.navigate(['stdprofile']);
 }
   logout(){
     
     const swalWithBootstrapButtons = swal.mixin({
       customClass: {
-        confirmButton: 'btn btn-success',
+        confirmButton: 'btn btn-primary',
         cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false
     })
     
     swalWithBootstrapButtons.fire({
-      title: 'logout ?',
-      text: "You are logging out...",
+      title: 'Logout ?',
+      text: "Logging out?",
       showCancelButton: true,
-      confirmButtonText: 'Yes Confirm',
-      cancelButtonText: 'No, cancel!',
+      confirmButtonText: 'Yes',
+      cancelButtonText: 'No',
       reverseButtons: true
     }).then((result) => {
       if (result.value) {

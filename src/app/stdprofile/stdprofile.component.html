@@ -1,112 +1,27 @@
- <br><br><br>
- <div class="content">
-     <div class="container-fluid"> 
- 
-     <div class="row">
-       <div class="col-md-12 col-lg-8 col-xs-0 col-sm-8" style="padding-left: 150px;">
-         <div class="card">
-           <div class="card-header">
-             <h4 class="card-title">My Study Profile</h4>
-           </div>
-           <div class="card-body">
-             <form >
-               <div class="row">
-                 <div class="col-md-6">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">Student Number</label>
-                     <input type="text"id="company" name="studentno" [ngModel]="userdata.studentno" class="form-control" disabled>
-                   </div>
-                 </div>
-             <div class="col-md-6">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">Index Number</label>
-                     <input type="text" class="form-control" name="indexno"  [ngModel]="userdata.indexno" disabled>
-                   </div>
-                 </div>
-                 <div class="col-md-4">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Surname</label>
-                    <input type="text" class="form-control" name="lastname"  [ngModel]="userdata.lastname" disabled>
-                  </div>
-                </div>
-
-                 <div class="col-md-4">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">First Name</label>
-                     <input type="email" id="emailid" name="firstname" [ngModel]="userdata.firstname" class="form-control" disabled>
-                   </div>
-                 </div>
-                 <div class="col-md-4">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Gender</label>
-                    <input type="text" id="gender" class="form-control" name="gender"  [ngModel]="gender" disabled>
-                  </div>
-                </div>
-               </div>
-               <div class="row">
-                 <div class="col-md-6">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">Year of Admission</label>
-                     <input type="text"  id="firstname" name="entryyear" [ngModel]="userdata.entryyear" class="form-control" disabled>
-                   </div>
-                 </div>
-                 <div class="col-md-6">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">Year of Graduation</label>
-                     <input type="text" id="lastname" name="exityear" [ngModel]="userdata.exityear" class="form-control" disabled>
-                   </div>
-                 </div>
-               </div>
-        
-               <div class="row">
-                 <div class="col-md-6">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">Faculty</label>
-                     <input type="text" id="residence" name="faculty" [ngModel]="userdata.faculty" class="form-control" disabled>
-                   </div>
-                 </div>
-                 <div class="col-md-6">
-                   <div class="form-group">
-                     <label class="bmd-label-floating">Department</label>
-                     <input type="text"  id="pass" name="department" [ngModel]="userdata.department" class="form-control" disabled>
-                   </div>
-                 </div>
-               </div>
-
-               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 0" (click)="paymentoption()">Proceed to payment</button>
-               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus == 1" (click)="confirmpayment()">Confirm Payment</button>
-               <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus == 2" (click)="attendance()">{{ confirmattendance }}</button>
-               <!-- <button type="submit" class="btn btn-sm pull-right" *ngIf="paymentstatus === 2" (click)="print()">Print</button> -->
-
-               <div class="clearfix"></div>
-             </form>
-           </div>
-         </div>
-       </div>
-       <div class="col-md-2 col-sm-4 col-lg-4" style="padding-right: 150px;">
-         <div class="card card-profile">
-           <div class="card-avatar">
-             <a href="#pablo">
-               <img class="img" src="../assets/img/faces/boss.png"/>
-             </a>
-           </div>
-           <div class="card-body">
-             <h6 class="card-category" style="color:rgb(41, 40, 7);">Programme</h6>
-             <h4 class="card-title"> {{programme}}</h4>
-             <h6 class="card-category" style="color:rgb(41, 40, 7);">Paid Status</h6>
-             <h4 class="card-title"> {{paidstatus}}</h4>
-             <h6 class="card-category" style="color:rgb(41, 40, 7);">Attending Status</h6>
-             <h4 class="card-title"> {{attendancestatus}}</h4>
-             <p class="card-description">
-               Graduand of Kumasi Technical University
-             </p>
-           </div>
-         </div>
-       </div>
- 
-     </div>
- 
-     </div>
-     </div>
- 
- 
+<div class="layout-container">
+    <div class="card">
+        <img class="img" src="../assets/img/faces/boss.png"/>
+        <div class="card-body">
+            <h1>{{userdata.firstname}}   {{userdata.lastname}}</h1>
+            <span>{{userdata.indexno}}</span>
+            <span>{{userdata.studentno}}</span>
+            <span>{{gender}}</span>
+            <span>Entry Year:: {{userdata.entryyear}}</span>
+            <span>Graduating Year:: {{userdata.exityear}}</span>
+            <span>{{programme}}</span>
+            <span>{{userdata.department}}</span>
+            <span>{{userdata.faculty}}</span>
+            <span class="status">{{paidstatus}}</span>
+            <span class="status">{{attendancestatus}}</span>
+            <div class="form-group" *ngIf="mobile === '' && paymentstatus === 2" >
+                <input type="text" [(ngModel)]="tel" name="tel" placeholder="Your Active Mobile Number" required>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary" *ngIf="paymentstatus === 0" (click)="paymentoption()">Proceed to payment</button>
+                <button type="submit" class="btn btn-primary" *ngIf="paymentstatus == 1" (click)="confirmpayment()">Confirm Payment</button>
+                <button type="submit" class="btn btn-primary" *ngIf="paymentstatus == 2" >{{ confirmattendance }}</button>
+                <button type="submit" class="btn btn-primary" *ngIf="paymentstatus === 2" (click)="print()">Print</button>
+            </div>
+        </div>
+    </div>
+</div>

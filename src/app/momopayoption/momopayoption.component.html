@@ -1,31 +1,17 @@
-<body>
-  <div class="row">
-      <div class="col-md-4 col-lg-5 logincard">
-     <div class="card animated tada" >
-       <h3 class="card-category text-gray" align="center">Mobile Money Payment</h3>
-  <div class="card-avatar">
-          <a href="#pablo">
-          </a>
-        </div>
-        <div class="card-body">
-            <form>
-              <div class="form-group">
-                <label class="bmd-label-floating">Amount</label>
-                <input type="number" class="form-control" id="amount" name="amount" [ngModel]="amount" required disabled>
-              </div>
-              <br><br>        
-              <button type="submit" [disabled]="disable" class="btn" (click)="makepayment()">{{btntext}}</button>                  
-          </form>
+
+<div class="card">
+  <h1>Mobile Money Payment Summary</h1>
+  <form>
+    <div class="form-group">
+      <p>Graduation Fee:: <span>GHC 350.00</span></p>
+      <p>Transaction Fee:: <span>3%</span></p>
+      <p>Grand Total:: <span>GHC 360.50</span></p>
+      <!-- <input type="number" name="amount" [ngModel]="amount" required disabled> -->
+      <button type="submit" [disabled]="disable" class="btn btn-primary"   (click)="makepayment()">{{btntext}}</button>
     </div>
-
+  </form>
 </div>
-</div>
-
-</div>  
-</body>
-  
-
-
+       
 
 
 

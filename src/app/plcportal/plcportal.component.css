@@ -1,68 +1,58 @@
-.range-form {
+.container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-flow: column;
+    height: 100%;
 }
-
-.range {
-    padding-right: 50px;
-}
-.range input {
-    flex-grow: 1;
-}
-.range-btn {
+.content {
+    margin-top: 5px;
     display: flex;
+    flex-wrap: wrap;
 }
-.card-header{
-    background: rgb(41, 40, 7);
+.card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 3px;
+    flex: 0.5 200px;
+    margin: 0 20px 20px 0;
 }
-.card-title{
-color: #fff;
+.card span{
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
 }
-.text{
-    color:rgb(41, 40, 7);
+h1 {
+    color: #19153a;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
-.btn{
-background: rgb(41, 40, 7);
-color: #fff;
+input {
+    width: 50%;
 }
-.gen2{
-  background: rgb(247, 74, 6);  
-  border-radius: 30px;
-  width: 100px;
-  height: 50px;
-  margin-top:5px;
-  cursor: pointer;
+.search {
+    display: flex;
+    justify-content: center;
 }
-
-
-
-
-.getternsetter{
-    background: #fff;
-    box-shadow: 5px 20px 20px 15px rgb(255, 255, 255);
-    line-height: 100px;
-    margin-bottom: -23px;
-
+#detail {
+    font-size: 16px;
 }
-
-h3.card-title{
-    font-weight: 20px;
+.status {
+    color: #9b2c2c;
 }
-.heading-report1{
-    box-shadow: 25px 20px 20px 25px rgb(207, 207, 207);
-    background: #fff;
-    line-height: 50px;
-    margin-bottom: -23px;
-
+@media all and (max-width: 600px){
+    .menu {
+        justify-content: center;
+    }
+    
+    
+    
 }
 
-
-p.color{
-    color: #52516a;
-    font-size: 50px;
-}
-
-h3.card-title{
-    font-weight: bold;
+@media all and (min-width: 900px){
+    li {
+        display: block;
+        width: auto;
+        order: 1;
+        padding: 0 15px;
+    }
+    
 }

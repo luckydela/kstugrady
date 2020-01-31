@@ -24,7 +24,7 @@ export class ConfirmpaymentComponent implements OnInit {
     this.disable = true
     const swalWithBootstrapButtons = swal.mixin({
       customClass: {
-        confirmButton: 'btn btn-success',
+        confirmButton: 'btn btn-primary',
         cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false
