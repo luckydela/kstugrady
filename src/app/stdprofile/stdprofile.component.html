@@ -13,9 +13,9 @@
             <span>{{userdata.faculty}}</span>
             <span class="status">{{paidstatus}}</span>
             <span class="status">{{attendancestatus}}</span>
-            <div class="form-group" *ngIf="mobile === '' && paymentstatus === 2" >
+            <!-- <div class="form-group" *ngIf="mobile === '' && paymentstatus === 2" >
                 <input type="text" [(ngModel)]="tel" name="tel" placeholder="Your Active Mobile Number" required>
-            </div>
+            </div> -->
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary" *ngIf="paymentstatus === 0" (click)="paymentoption()">Proceed to payment</button>
                 <button type="submit" class="btn btn-primary" *ngIf="paymentstatus == 1" (click)="confirmpayment()">Confirm Payment</button>

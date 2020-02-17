@@ -40,7 +40,7 @@ export class StdprofileComponent implements OnInit {
         this.paidstatus = rd[0].paymentstatus === 2 ? 'GRADUATION PAYMENTS RECEIVED' : 'NO GRADUATION PAYMENTS RECEIVED';
         this.paymentstatus = rd[0].paymentstatus;
         this.attendancestatus = rd[0].attendancestatus === 1 ? 'I WILL ATTEND THE GRADUATION' : 'I WILL NOT ATTEND THE GRADUATION';
-        this.confirmattendance = rd[0].attendancestatus === 1 ? 'Update Graduation Attendance Status' : 'Update Graduation Attendance Status';
+        this.confirmattendance = 'Attendance Registration is Closed!!!'; //rd[0].attendancestatus === 1 ? 'Update Graduation Attendance Status' : 'Update Graduation Attendance Status';
         this.mobile = rd[0].mobileno;
         this.tel = rd[0].mobileno;
       }

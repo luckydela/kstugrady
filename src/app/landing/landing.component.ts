@@ -18,7 +18,7 @@ export class LandingComponent implements OnInit {
   }
 
   getStarted(route:any){
-    if(route === 'login') return this.ssv.dialog('The system has been closed for graduation registration','Message')
+    // if(route === 'login') return this.ssv.dialog('The system has been closed for graduation registration','Message')
 
       this.router.navigate([route])
   }

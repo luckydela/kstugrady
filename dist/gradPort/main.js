@@ -852,8 +852,7 @@ var LandingComponent = /** @class */ (function () {
     LandingComponent.prototype.ngOnInit = function () {
     };
     LandingComponent.prototype.getStarted = function (route) {
-        if (route === 'login')
-            return this.ssv.dialog('The system has been closed for graduation registration', 'Message');
+        // if(route === 'login') return this.ssv.dialog('The system has been closed for graduation registration','Message')
         this.router.navigate([route]);
     };
     LandingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1708,7 +1707,7 @@ module.exports = "h1 {\n    color: #19153a;\n    margin-bottom: 20px;\n    font-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"layout-container\">\n    <div class=\"card\">\n        <img class=\"img\" src=\"../assets/img/faces/boss.png\"/>\n        <div class=\"card-body\">\n            <h1>{{userdata.firstname}}   {{userdata.lastname}}</h1>\n            <span>{{userdata.indexno}}</span>\n            <span>{{userdata.studentno}}</span>\n            <span>{{gender}}</span>\n            <span>Entry Year:: {{userdata.entryyear}}</span>\n            <span>Graduating Year:: {{userdata.exityear}}</span>\n            <span>{{programme}}</span>\n            <span>{{userdata.department}}</span>\n            <span>{{userdata.faculty}}</span>\n            <span class=\"status\">{{paidstatus}}</span>\n            <span class=\"status\">{{attendancestatus}}</span>\n            <div class=\"form-group\" *ngIf=\"mobile === '' && paymentstatus === 2\" >\n                <input type=\"text\" [(ngModel)]=\"tel\" name=\"tel\" placeholder=\"Your Active Mobile Number\" required>\n            </div>\n            <div class=\"card-footer\">\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus === 0\" (click)=\"paymentoption()\">Proceed to payment</button>\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus == 1\" (click)=\"confirmpayment()\">Confirm Payment</button>\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus == 2\" >{{ confirmattendance }}</button>\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus === 2\" (click)=\"print()\">Print</button>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"layout-container\">\n    <div class=\"card\">\n        <img class=\"img\" src=\"../assets/img/faces/boss.png\"/>\n        <div class=\"card-body\">\n            <h1>{{userdata.firstname}}   {{userdata.lastname}}</h1>\n            <span>{{userdata.indexno}}</span>\n            <span>{{userdata.studentno}}</span>\n            <span>{{gender}}</span>\n            <span>Entry Year:: {{userdata.entryyear}}</span>\n            <span>Graduating Year:: {{userdata.exityear}}</span>\n            <span>{{programme}}</span>\n            <span>{{userdata.department}}</span>\n            <span>{{userdata.faculty}}</span>\n            <span class=\"status\">{{paidstatus}}</span>\n            <span class=\"status\">{{attendancestatus}}</span>\n            <!-- <div class=\"form-group\" *ngIf=\"mobile === '' && paymentstatus === 2\" >\n                <input type=\"text\" [(ngModel)]=\"tel\" name=\"tel\" placeholder=\"Your Active Mobile Number\" required>\n            </div> -->\n            <div class=\"card-footer\">\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus === 0\" (click)=\"paymentoption()\">Proceed to payment</button>\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus == 1\" (click)=\"confirmpayment()\">Confirm Payment</button>\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus == 2\" >{{ confirmattendance }}</button>\n                <button type=\"submit\" class=\"btn btn-primary\" *ngIf=\"paymentstatus === 2\" (click)=\"print()\">Print</button>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1757,7 +1756,7 @@ var StdprofileComponent = /** @class */ (function () {
                 _this.paidstatus = rd[0].paymentstatus === 2 ? 'GRADUATION PAYMENTS RECEIVED' : 'NO GRADUATION PAYMENTS RECEIVED';
                 _this.paymentstatus = rd[0].paymentstatus;
                 _this.attendancestatus = rd[0].attendancestatus === 1 ? 'I WILL ATTEND THE GRADUATION' : 'I WILL NOT ATTEND THE GRADUATION';
-                _this.confirmattendance = rd[0].attendancestatus === 1 ? 'Update Graduation Attendance Status' : 'Update Graduation Attendance Status';
+                _this.confirmattendance = 'Attendance Registration is Closed!!!'; //rd[0].attendancestatus === 1 ? 'Update Graduation Attendance Status' : 'Update Graduation Attendance Status';
                 _this.mobile = rd[0].mobileno;
                 _this.tel = rd[0].mobileno;
             }
