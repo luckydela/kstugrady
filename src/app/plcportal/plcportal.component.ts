@@ -15,8 +15,11 @@ export class PlcportalComponent implements OnInit {
   paid:any = 0;
   showsearch:boolean = true;
   showlist:boolean = false;
+  vclass:boolean = false;
   searchtext:string = 'Search';
+  sendtext:string = 'Send'
   studentno:any='';
+  mobileno:any ='';
   disable:boolean = false;
 
   userdata;
@@ -62,12 +65,20 @@ export class PlcportalComponent implements OnInit {
   searchshow() {
     this.showsearch = true
     this.showlist = false;
+    this.vclass = false
   }
 
   list() {
     this.showlist = true;
     this.showsearch = false;
+    this.vclass = false
   }
+  vclassform() {
+    this.showsearch = false
+    this.showlist = false;
+    this.vclass = true
+  }
+
 
   search(){
     if(this.studentno === '') return this.ssv.dialog('Studentno field is required','Caution');
@@ -114,6 +125,28 @@ export class PlcportalComponent implements OnInit {
   close() {
     this.result = false;
     this.showsearch = true;
+  }
+  send(){
+    if(this.studentno === '' || this.mobileno === '') return this.ssv.dialog('Studentno and mobileno fields is required','Caution');
+    this.disable = true
+    this.sendtext = 'Processing ...'
+    this.ssv.sendsms({sno:this.studentno,mob:this.mobileno})
+    .subscribe(rd => {
+      
+      this.disable = false
+      this.sendtext = 'Send'
+      if(rd === null ) return  this.ssv.dialog(`Message not sent for ${this.studentno}. You didnot register last semester`,'Error');
+
+      if(rd[0] === '1701'){
+        this.ssv.dialog(`Message sent to ${rd[1]} with id: ${rd[2]}`,'Success');
+        this.studentno = ''
+        this.mobileno = ''
+      }
+      else {
+        this.ssv.dialog(`Message not sent`,'Error');
+      }
+    },err => console.log(err));
+    
   }
 
 }

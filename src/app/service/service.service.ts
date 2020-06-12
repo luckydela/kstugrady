@@ -9,8 +9,8 @@ import swal from 'sweetalert2';
 })
 export class ServiceService {
 
-  // devurl:any = 'http://kstugraduate.loc/svs/';
-  devurl:any = 'https://grad.kstu.edu.gh/svs/';
+  devurl:any = 'http://kstugraduate.loc/svs/';
+  // devurl:any = 'https://grad.kstu.edu.gh/svs/';
   isLoggedInStatus:any;
   rd:Array<any>
 
@@ -90,6 +90,15 @@ export class ServiceService {
 
     return this.http.post<Array<any>>(this.devurl,fm,this.options)
   }
+  sendsms(sd:any){
+    let fm = new HttpParams()
+    .set("f","controller")
+    .set("m","sendsms")
+    .set("mob",sd.mob)
+    .set("sno",sd.sno)
+
+    return this.http.post<Array<any>>(this.devurl,fm,this.options)
+  }
   confirmattendance(ud:any){
     let fm = new HttpParams()
     .set("studentno",ud.studentno)
@@ -124,6 +133,7 @@ export class ServiceService {
 
     return this.http.post<Array<any>>(this.devurl,fm,this.options)
   }
+
   dialog(msg:any,title:any){
     const swalWithBootstrapButtons = swal.mixin({
       customClass: {

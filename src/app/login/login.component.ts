@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private ssv: ServiceService) { }
 
   ngOnInit() {
+    
   }
 
   stdlogin(){
@@ -56,12 +57,6 @@ export class LoginComponent implements OnInit {
       })
 
     }
-  }
-  attendace(){
-
-  }
-  print(){
-
   }
 
 }

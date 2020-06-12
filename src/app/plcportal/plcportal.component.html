@@ -2,6 +2,8 @@
   <div class="actions">
     <button class="btn btn-primary" (click)="list()">View Attendees</button>
     <button class="btn btn-danger" (click)="searchshow()">Search Graduand</button>
+    <button class="btn btn-danger" (click)="vclassform()">Send Vclass SMS</button>
+
   </div>
   <div class="content">
       <div class="card">
@@ -49,11 +51,46 @@
 
       <div>
           <button type="submit" [disabled]="disable" class="btn btn-danger"   (click)="close()">Close</button>
-      </div>
+      
+        </div>
     </div>
   </div>
   
   <div class="list" *ngIf="showlist">
     Attendees
+  </div>
+
+  <div class="search">
+    <div class="card" *ngIf="vclass">
+      <h1>Send Vclass SMS</h1>
+      <form>
+        <div class="form-group">
+          <input type="text" name="studentno" [(ngModel)]="studentno" placeholder="Studentno" required>
+          <input type="text" name="mobileno" [(ngModel)]="mobileno" placeholder="Mobileno" required>
+          <div>
+            <button type="submit" [disabled]="disable" class="btn btn-danger"   (click)="send()">{{sendtext}}</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card" *ngIf="result">
+      <h1>{{firstname}}   {{lastname}}</h1>
+      <span id="detail">{{indexno}}</span>
+      <span id="detail">{{sno}}</span>
+      <span id="detail">{{gender}}</span>
+      <span id="detail">Entry Year:: {{entryyear}}</span>
+      <span id="detail">Graduating Year:: {{exityear}}</span>
+      <span id="detail">{{mobileno}}</span>
+      <span id="detail">{{programme}}</span>
+      <span id="detail">{{department}}</span>
+      <span id="detail">{{faculty}}</span>
+      <span id="detail" class="status">{{paidstatus}}</span>
+      <span id="detail" class="status">{{attendancestatus}}</span>
+
+      <div>
+          <button type="submit" [disabled]="disable" class="btn btn-danger"   (click)="close()">Close</button>
+      
+        </div>
+    </div>
   </div>
 </div>

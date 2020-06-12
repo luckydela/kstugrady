@@ -960,10 +960,6 @@ var LoginComponent = /** @class */ (function () {
             });
         }
     };
-    LoginComponent.prototype.attendace = function () {
-    };
-    LoginComponent.prototype.print = function () {
-    };
     LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-login',
@@ -1226,7 +1222,7 @@ module.exports = ".container {\n    display: -webkit-box;\n    display: flex;\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"actions\">\n    <button class=\"btn btn-primary\" (click)=\"list()\">View Attendees</button>\n    <button class=\"btn btn-danger\" (click)=\"searchshow()\">Search Graduand</button>\n  </div>\n  <div class=\"content\">\n      <div class=\"card\">\n        <h1>Total Graduands</h1>\n        <span>{{tot}}</span>Students\n      </div>\n    <div class=\"card\">\n      <h1>Graduands Attending</h1>\n      <span>{{atd}}</span>Students\n    </div>\n    <div class=\"card\">\n      <h1>Graduands Not Attending</h1>\n      <span>{{ntd}}</span>Students\n    </div>\n    <div class=\"card\">\n      <h1>Paid</h1>\n      <span>{{paid}}</span>Students\n    </div>\n  </div>\n  <div class=\"search\">\n    <div class=\"card\" *ngIf=\"showsearch\">\n      <h1>Search Graduand</h1>\n      <form>\n        <div class=\"form-group\">\n          <input type=\"text\" name=\"studentno\" [(ngModel)]=\"studentno\" placeholder=\"Studentno\" required>\n          <div>\n            <button type=\"submit\" [disabled]=\"disable\" class=\"btn btn-danger\"   (click)=\"search()\">{{searchtext}}</button>\n          </div>\n        </div>\n      </form>\n    </div>\n    <div class=\"card\" *ngIf=\"result\">\n      <h1>{{firstname}}   {{lastname}}</h1>\n      <span id=\"detail\">{{indexno}}</span>\n      <span id=\"detail\">{{sno}}</span>\n      <span id=\"detail\">{{gender}}</span>\n      <span id=\"detail\">Entry Year:: {{entryyear}}</span>\n      <span id=\"detail\">Graduating Year:: {{exityear}}</span>\n      <span id=\"detail\">{{mobileno}}</span>\n      <span id=\"detail\">{{programme}}</span>\n      <span id=\"detail\">{{department}}</span>\n      <span id=\"detail\">{{faculty}}</span>\n      <span id=\"detail\" class=\"status\">{{paidstatus}}</span>\n      <span id=\"detail\" class=\"status\">{{attendancestatus}}</span>\n\n      <div>\n          <button type=\"submit\" [disabled]=\"disable\" class=\"btn btn-danger\"   (click)=\"close()\">Close</button>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"list\" *ngIf=\"showlist\">\n    Attendees\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"actions\">\n    <button class=\"btn btn-primary\" (click)=\"list()\">View Attendees</button>\n    <button class=\"btn btn-danger\" (click)=\"searchshow()\">Search Graduand</button>\n    <button class=\"btn btn-danger\" (click)=\"vclassform()\">Send Vclass SMS</button>\n\n  </div>\n  <div class=\"content\">\n      <div class=\"card\">\n        <h1>Total Graduands</h1>\n        <span>{{tot}}</span>Students\n      </div>\n    <div class=\"card\">\n      <h1>Graduands Attending</h1>\n      <span>{{atd}}</span>Students\n    </div>\n    <div class=\"card\">\n      <h1>Graduands Not Attending</h1>\n      <span>{{ntd}}</span>Students\n    </div>\n    <div class=\"card\">\n      <h1>Paid</h1>\n      <span>{{paid}}</span>Students\n    </div>\n  </div>\n  <div class=\"search\">\n    <div class=\"card\" *ngIf=\"showsearch\">\n      <h1>Search Graduand</h1>\n      <form>\n        <div class=\"form-group\">\n          <input type=\"text\" name=\"studentno\" [(ngModel)]=\"studentno\" placeholder=\"Studentno\" required>\n          <div>\n            <button type=\"submit\" [disabled]=\"disable\" class=\"btn btn-danger\"   (click)=\"search()\">{{searchtext}}</button>\n          </div>\n        </div>\n      </form>\n    </div>\n    <div class=\"card\" *ngIf=\"result\">\n      <h1>{{firstname}}   {{lastname}}</h1>\n      <span id=\"detail\">{{indexno}}</span>\n      <span id=\"detail\">{{sno}}</span>\n      <span id=\"detail\">{{gender}}</span>\n      <span id=\"detail\">Entry Year:: {{entryyear}}</span>\n      <span id=\"detail\">Graduating Year:: {{exityear}}</span>\n      <span id=\"detail\">{{mobileno}}</span>\n      <span id=\"detail\">{{programme}}</span>\n      <span id=\"detail\">{{department}}</span>\n      <span id=\"detail\">{{faculty}}</span>\n      <span id=\"detail\" class=\"status\">{{paidstatus}}</span>\n      <span id=\"detail\" class=\"status\">{{attendancestatus}}</span>\n\n      <div>\n          <button type=\"submit\" [disabled]=\"disable\" class=\"btn btn-danger\"   (click)=\"close()\">Close</button>\n      \n        </div>\n    </div>\n  </div>\n  \n  <div class=\"list\" *ngIf=\"showlist\">\n    Attendees\n  </div>\n\n  <div class=\"search\">\n    <div class=\"card\" *ngIf=\"vclass\">\n      <h1>Send Vclass SMS</h1>\n      <form>\n        <div class=\"form-group\">\n          <input type=\"text\" name=\"studentno\" [(ngModel)]=\"studentno\" placeholder=\"Studentno\" required>\n          <input type=\"text\" name=\"mobileno\" [(ngModel)]=\"mobileno\" placeholder=\"Mobileno\" required>\n          <div>\n            <button type=\"submit\" [disabled]=\"disable\" class=\"btn btn-danger\"   (click)=\"send()\">{{sendtext}}</button>\n          </div>\n        </div>\n      </form>\n    </div>\n    <div class=\"card\" *ngIf=\"result\">\n      <h1>{{firstname}}   {{lastname}}</h1>\n      <span id=\"detail\">{{indexno}}</span>\n      <span id=\"detail\">{{sno}}</span>\n      <span id=\"detail\">{{gender}}</span>\n      <span id=\"detail\">Entry Year:: {{entryyear}}</span>\n      <span id=\"detail\">Graduating Year:: {{exityear}}</span>\n      <span id=\"detail\">{{mobileno}}</span>\n      <span id=\"detail\">{{programme}}</span>\n      <span id=\"detail\">{{department}}</span>\n      <span id=\"detail\">{{faculty}}</span>\n      <span id=\"detail\" class=\"status\">{{paidstatus}}</span>\n      <span id=\"detail\" class=\"status\">{{attendancestatus}}</span>\n\n      <div>\n          <button type=\"submit\" [disabled]=\"disable\" class=\"btn btn-danger\"   (click)=\"close()\">Close</button>\n      \n        </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1258,8 +1254,11 @@ var PlcportalComponent = /** @class */ (function () {
         this.paid = 0;
         this.showsearch = true;
         this.showlist = false;
+        this.vclass = false;
         this.searchtext = 'Search';
+        this.sendtext = 'Send';
         this.studentno = '';
+        this.mobileno = '';
         this.disable = false;
         this.paymentstatus = 0;
         this.mobile = '';
@@ -1283,10 +1282,17 @@ var PlcportalComponent = /** @class */ (function () {
     PlcportalComponent.prototype.searchshow = function () {
         this.showsearch = true;
         this.showlist = false;
+        this.vclass = false;
     };
     PlcportalComponent.prototype.list = function () {
         this.showlist = true;
         this.showsearch = false;
+        this.vclass = false;
+    };
+    PlcportalComponent.prototype.vclassform = function () {
+        this.showsearch = false;
+        this.showlist = false;
+        this.vclass = true;
     };
     PlcportalComponent.prototype.search = function () {
         var _this = this;
@@ -1334,6 +1340,28 @@ var PlcportalComponent = /** @class */ (function () {
     PlcportalComponent.prototype.close = function () {
         this.result = false;
         this.showsearch = true;
+    };
+    PlcportalComponent.prototype.send = function () {
+        var _this = this;
+        if (this.studentno === '' || this.mobileno === '')
+            return this.ssv.dialog('Studentno and mobileno fields is required', 'Caution');
+        this.disable = true;
+        this.sendtext = 'Processing ...';
+        this.ssv.sendsms({ sno: this.studentno, mob: this.mobileno })
+            .subscribe(function (rd) {
+            _this.disable = false;
+            _this.sendtext = 'Send';
+            if (rd === null)
+                return _this.ssv.dialog("Message not sent for " + _this.studentno + ". You didnot register last semester", 'Error');
+            if (rd[0] === '1701') {
+                _this.ssv.dialog("Message sent to " + rd[1] + " with id: " + rd[2], 'Success');
+                _this.studentno = '';
+                _this.mobileno = '';
+            }
+            else {
+                _this.ssv.dialog("Message not sent", 'Error');
+            }
+        }, function (err) { return console.log(err); });
     };
     PlcportalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1446,8 +1474,7 @@ __webpack_require__.r(__webpack_exports__);
 var ServiceService = /** @class */ (function () {
     function ServiceService(http) {
         this.http = http;
-        // devurl:any = 'http://kstugraduate.loc/svs/';
-        this.devurl = 'https://grad.kstu.edu.gh/svs/';
+        this.devurl = 'http://kstugraduate.loc/svs/';
         this.httpHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
             .set("Access-Control-Allow-Origin", "http://localhost:4200")
             .set("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS")
@@ -1514,6 +1541,14 @@ var ServiceService = /** @class */ (function () {
             .set("rcptno", rcptno)
             .set("f", "controller")
             .set("m", "confirm");
+        return this.http.post(this.devurl, fm, this.options);
+    };
+    ServiceService.prototype.sendsms = function (sd) {
+        var fm = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
+            .set("f", "controller")
+            .set("m", "sendsms")
+            .set("mob", sd.mob)
+            .set("sno", sd.sno);
         return this.http.post(this.devurl, fm, this.options);
     };
     ServiceService.prototype.confirmattendance = function (ud) {
